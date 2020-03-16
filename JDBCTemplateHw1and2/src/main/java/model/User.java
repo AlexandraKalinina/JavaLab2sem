@@ -13,6 +13,4 @@ public class User {
     private Long idUser;
     private String name;
     private int age;
-
-
 }
