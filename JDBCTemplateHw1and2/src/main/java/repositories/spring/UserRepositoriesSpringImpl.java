@@ -13,9 +13,11 @@ import java.util.Optional;
 
 public class UserRepositoriesSpringImpl implements UserRepositories {
 
-    private static final String SQL_SELECT_BY_ID = "select * from users where id = ?;";
+    private static final String SQL_SELECT_BY_ID = "select * from ( (select * from users where id = ?) u left join posts on u.id = posts.iduser) limit 1";
+    //private static final String SQL_SELECT_BY_ID = "select * from users where id = ?;";
 
-    private static final String SQL_SELECT_ALL = "select * from users";
+    //private static final String SQL_SELECT_ALL = "select * from users";
+    private static final String SQL_SELECT_ALL = "select * from users left join posts p on users.id = p.iduser";
 
     private static final String SQL_INSERT = "insert into users(name, age) values (?,?)";
 
