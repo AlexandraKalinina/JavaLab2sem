@@ -1,4 +1,3 @@
-C:\Users\Александра\IdeaProjects\SpringProjectFiles\src\main\java\ru\spring\files\security\UserDetailsImpl.java
 C:\Users\Александра\IdeaProjects\SpringProjectFiles\src\main\java\ru\spring\files\service\MessageCreateImpl.java
 C:\Users\Александра\IdeaProjects\SpringProjectFiles\src\main\java\ru\spring\files\service\SignUpService.java
 C:\Users\Александра\IdeaProjects\SpringProjectFiles\src\main\java\ru\spring\files\config\ApplicationContextConfig.java
@@ -6,6 +5,7 @@ C:\Users\Александра\IdeaProjects\SpringProjectFiles\src\main\java\ru\s
 C:\Users\Александра\IdeaProjects\SpringProjectFiles\src\main\java\ru\spring\files\dto\SignUpDto.java
 C:\Users\Александра\IdeaProjects\SpringProjectFiles\src\main\java\ru\spring\files\service\UserService.java
 C:\Users\Александра\IdeaProjects\SpringProjectFiles\src\main\java\ru\spring\files\service\SignInService.java
+C:\Users\Александра\IdeaProjects\SpringProjectFiles\src\main\java\ru\spring\files\security\details\UserDetailsImpl.java
 C:\Users\Александра\IdeaProjects\SpringProjectFiles\src\main\java\ru\spring\files\service\EmailService.java
 C:\Users\Александра\IdeaProjects\SpringProjectFiles\src\main\java\ru\spring\files\model\User.java
 C:\Users\Александра\IdeaProjects\SpringProjectFiles\src\main\java\ru\spring\files\service\FileServiceImpl.java
@@ -22,7 +22,7 @@ C:\Users\Александра\IdeaProjects\SpringProjectFiles\src\main\java\ru\s
 C:\Users\Александра\IdeaProjects\SpringProjectFiles\src\main\java\ru\spring\files\aspects\FileSenderMailAspect.java
 C:\Users\Александра\IdeaProjects\SpringProjectFiles\src\main\java\ru\spring\files\controller\FileController.java
 C:\Users\Александра\IdeaProjects\SpringProjectFiles\src\main\java\ru\spring\files\model\State.java
-C:\Users\Александра\IdeaProjects\SpringProjectFiles\src\main\java\ru\spring\files\security\UserDetailsServiceImpl.java
+C:\Users\Александра\IdeaProjects\SpringProjectFiles\src\main\java\ru\spring\files\security\details\UserDetailsServiceImpl.java
 C:\Users\Александра\IdeaProjects\SpringProjectFiles\src\main\java\ru\spring\files\repositories\CrudRepositories.java
 C:\Users\Александра\IdeaProjects\SpringProjectFiles\src\main\java\ru\spring\files\repositories\UserRepositories.java
 C:\Users\Александра\IdeaProjects\SpringProjectFiles\src\main\java\ru\spring\files\service\ConfirmServiceImpl.java

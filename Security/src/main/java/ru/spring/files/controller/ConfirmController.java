@@ -1,6 +1,7 @@
 package ru.spring.files.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -17,6 +18,7 @@ public class ConfirmController {
     @Autowired
     private ConfirmService confirmService;
 
+    @PreAuthorize("permitAll()")
     @RequestMapping(value = "/confirm/*", method = RequestMethod.GET)
     public ModelAndView confirmCreate(HttpSession session) {
         ModelAndView modelAndView = new ModelAndView();
@@ -27,6 +29,7 @@ public class ConfirmController {
         }
         return modelAndView;
     }
+    @PreAuthorize("permitAll()")
     @RequestMapping(value = "/confirm/redirect", method = RequestMethod.GET)
     public ModelAndView redirectWithUsingRedirectPrefix() {
         return new ModelAndView("redirect:/profile");

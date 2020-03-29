@@ -33,10 +33,10 @@ public class SignInController {
             Optional<User> user = signInService.signIn(userDto);
             if (user.isPresent()) {
                 session.setAttribute("user", userDto);
-                return new ModelAndView("redirect:/file_load");
+                return new ModelAndView("redirect:/profile");
             } else return new ModelAndView("redirect:/signIn");
         }
-        else return new ModelAndView("redirect:/file_load");
+        else return new ModelAndView("redirect:/profile");
     }
 
 }

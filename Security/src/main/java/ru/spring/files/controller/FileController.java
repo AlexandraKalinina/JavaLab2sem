@@ -1,6 +1,7 @@
 package ru.spring.files.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,6 +24,7 @@ public class FileController {
     @Autowired
     private FileService fileService;
 
+    @PreAuthorize("isAuthenticated()")
     @RequestMapping(value = "/profile", method = RequestMethod.GET)
     public ModelAndView loadFile() {
         ModelAndView modelAndView = new ModelAndView();
@@ -30,6 +32,7 @@ public class FileController {
         return modelAndView;
     }
 
+    @PreAuthorize("isAuthenticated()")
     @RequestMapping(value = "/files", method = RequestMethod.POST)
     public ModelAndView uploadFile(@RequestParam("file") MultipartFile file, HttpSession session) {
         if (session.getAttribute("user") != null) {
@@ -39,6 +42,7 @@ public class FileController {
         return null;
     }
 
+    @PreAuthorize("isAuthenticated()")
     @RequestMapping(value ="/files/{file-name:.+}" , method = RequestMethod.GET)
     public ModelAndView getFile(@PathVariable("file-name") String fileName, HttpServletResponse response) {
         File file = fileService.downloadFile(fileName);

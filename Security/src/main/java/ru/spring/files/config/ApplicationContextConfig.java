@@ -17,7 +17,7 @@ import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver;
 import ru.spring.files.repositories.UserRepositories;
 import ru.spring.files.repositories.UserRepositoriesImpl;
-import ru.spring.files.security.UserDetailsServiceImpl;
+import ru.spring.files.security.details.UserDetailsServiceImpl;
 import ru.spring.files.service.*;
 
 import javax.sql.DataSource;
@@ -150,7 +150,7 @@ public class ApplicationContextConfig {
     }
 
     @Bean
-    public UserDetailsService userDetailsService() {
+    public UserDetailsService customUserDetailsService() {
         return new UserDetailsServiceImpl();
     }
 }

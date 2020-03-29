@@ -1,6 +1,7 @@
 package ru.spring.files.security.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -14,6 +15,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
+    @Qualifier(value = "customUserDetailsService")
     private UserDetailsService userDetailsService;
     @Autowired
     private BCryptPasswordEncoder passwordEncoder;
@@ -23,14 +25,18 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         //super.configure(http);
 
         //http.csrf().disable();
-        http.authorizeRequests().antMatchers("/signUp").permitAll() // все могут просматривать эту страничку
+        http.authorizeRequests().antMatchers("/registration").permitAll() // все могут просматривать эту страничку
                                 .antMatchers("/profile").authenticated() //просмотр этой странички только аутенфицированные пользователи
-                                .antMatchers("/").authenticated();
+                                .antMatchers("/confirm/*").permitAll()
+                                .antMatchers("/files").authenticated()
+                                .antMatchers("/files/file-name:.+").authenticated();
         http.formLogin()
                 .loginPage("/signIn")
                 .usernameParameter("email")
-                .defaultSuccessUrl("/") //если все хорошо, то переходим в корень
-                .failureUrl("signIn?error") // если нет, то ошибка
+                .passwordParameter("password")
+                .defaultSuccessUrl("/profile")
+                //если все хорошо, то переходим в корень
+                .failureUrl("/signIn?error") // если нет, то ошибка
                 .permitAll(); //разрешено всем
 
     }

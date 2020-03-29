@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="SpringDb@localhost" uuid="e0c1377a-4250-49b6-978c-e54e1018ab96">
+    <data-source source="LOCAL" name="UsersFilesUpload@localhost" uuid="fc5b4e8c-7ac1-4b63-a632-df25f371851e">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://localhost:5432/SpringDb</jdbc-url>
+      <jdbc-url>jdbc:postgresql://localhost:5432/UsersFilesUpload</jdbc-url>
     </data-source>
   </component>
 </project>

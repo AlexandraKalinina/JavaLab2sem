@@ -3,7 +3,6 @@ ru\spring\files\repositories\UserRepositories.class
 ru\spring\files\service\FileServiceImpl.class
 ru\spring\files\service\SignUpService.class
 ru\spring\files\service\SignInService.class
-ru\spring\files\security\UserDetailsServiceImpl.class
 ru\spring\files\service\EmailService.class
 ru\spring\files\model\User.class
 ru\spring\files\model\User$UserBuilder.class
@@ -11,8 +10,8 @@ ru\spring\files\service\ConfirmService.class
 ru\spring\files\service\MessageCreateImpl.class
 ru\spring\files\controller\ConfirmController.class
 ru\spring\files\repositories\RowMapper.class
+ru\spring\files\security\details\UserDetailsServiceImpl.class
 ru\spring\files\service\MessageCreate.class
-ru\spring\files\security\UserDetailsImpl.class
 ru\spring\files\service\UserService.class
 ru\spring\files\repositories\CrudRepositoriesUser.class
 ru\spring\files\dto\UserDto$UserDtoBuilder.class
@@ -22,6 +21,7 @@ ru\spring\files\service\FileService.class
 ru\spring\files\service\SignInServiceImpl.class
 ru\spring\files\model\Role.class
 ru\spring\files\dto\SignUpDto.class
+ru\spring\files\security\details\UserDetailsImpl.class
 ru\spring\files\repositories\UserRepositoriesImpl.class
 ru\spring\files\controller\RegistrationController.class
 ru\spring\files\dto\UserDto.class
