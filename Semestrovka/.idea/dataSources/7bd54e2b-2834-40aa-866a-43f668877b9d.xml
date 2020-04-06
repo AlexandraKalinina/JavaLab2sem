@@ -20,10 +20,8 @@
     <database id="5" parent="1" name="Library">
       <ObjectId>41801</ObjectId>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>523458</IntrospectionStateNumber>
+      <IntrospectionStateNumber>523493</IntrospectionStateNumber>
       <Current>1</Current>
-      <Relations>sequence|table|41813|41815|1
-</Relations>
     </database>
     <database id="6" parent="1" name="Products">
       <ObjectId>33242</ObjectId>
@@ -107,7 +105,7 @@
       <Comment>standard public schema</Comment>
       <StateNumber>360</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>523459</IntrospectionStateNumber>
+      <IntrospectionStateNumber>523494</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <access-method id="26" parent="5" name="btree">
@@ -166,76 +164,5 @@
       <SchemaName>pg_catalog</SchemaName>
       <SchemaId>11</SchemaId>
     </extension>
-    <sequence id="33" parent="25" name="users_id_seq">
-      <ObjectId>41813</ObjectId>
-      <StateNumber>523457</StateNumber>
-      <Owner>postgres</Owner>
-      <SequenceIdentity>1</SequenceIdentity>
-      <CacheSize>1</CacheSize>
-      <DataType>integer</DataType>
-    </sequence>
-    <table id="34" parent="25" name="users">
-      <ObjectId>41815</ObjectId>
-      <Owner>postgres</Owner>
-      <StateNumber>523457</StateNumber>
-    </table>
-    <column id="35" parent="34" name="id">
-      <Position>1</Position>
-      <DataType>integer|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>523457</StateNumber>
-      <DefaultExpression>nextval(&apos;users_id_seq&apos;::regclass)</DefaultExpression>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="36" parent="34" name="name">
-      <Position>2</Position>
-      <DataType>varchar|0s</DataType>
-      <StateNumber>523457</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="37" parent="34" name="email">
-      <Position>3</Position>
-      <DataType>varchar|0s</DataType>
-      <StateNumber>523457</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="38" parent="34" name="password">
-      <Position>4</Position>
-      <DataType>varchar|0s</DataType>
-      <StateNumber>523457</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="39" parent="34" name="state">
-      <Position>5</Position>
-      <DataType>varchar|0s</DataType>
-      <StateNumber>523457</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="40" parent="34" name="role">
-      <Position>6</Position>
-      <DataType>varchar|0s</DataType>
-      <StateNumber>523457</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="41" parent="34" name="confirmcode">
-      <Position>7</Position>
-      <DataType>varchar|0s</DataType>
-      <StateNumber>523457</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <index id="42" parent="34" name="users_pkey">
-      <ObjectId>41822</ObjectId>
-      <StateNumber>523457</StateNumber>
-      <ColNames>id</ColNames>
-      <Unique>1</Unique>
-      <Primary>1</Primary>
-    </index>
-    <key id="43" parent="34" name="users_pkey">
-      <ObjectId>41823</ObjectId>
-      <StateNumber>523457</StateNumber>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>users_pkey</UnderlyingIndexName>
-    </key>
   </database-model>
 </dataSource>

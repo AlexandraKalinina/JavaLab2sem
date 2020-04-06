@@ -1,10 +1,8 @@
 package ru.spring.semestrovka.service;
 
-import ru.spring.semestrovka.dto.UserDto;
-import ru.spring.semestrovka.model.User;
-
-import java.util.Optional;
+import ru.spring.semestrovka.dto.SignInDto;
+import ru.spring.semestrovka.dto.TokenDto;
 
 public interface SignInService {
-    Optional<User> signIn(UserDto userDto);
+    TokenDto signIn(SignInDto signInDto);
 }

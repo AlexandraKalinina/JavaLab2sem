@@ -1,7 +1,12 @@
 package ru.spring.semestrovka.service;
 
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.beans.factory.annotation.Autowired;
-import ru.spring.semestrovka.dto.UserDto;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.access.AccessDeniedException;
+import ru.spring.semestrovka.dto.SignInDto;
+import ru.spring.semestrovka.dto.TokenDto;
 import ru.spring.semestrovka.model.User;
 import ru.spring.semestrovka.repositories.UserRepositories;
 
@@ -15,14 +20,26 @@ public class SignInServiceImpl implements SignInService {
     @Autowired
     private UserService userService;
 
+    @Value("${jwt.secret}")
+    private String secret;
+
+
     @Override
-    public Optional<User> signIn(UserDto userDto) {
-        String login = userDto.getEmail();
-        String password = userDto.getPassword();
+    public TokenDto signIn(SignInDto signInDto) {
+        String login = signInDto.getEmail();
+        String password = signInDto.getPassword();
         Optional<User> user = userRepositories.getUserByLogin(login);
-        if (user.isPresent() && userService.checkUserByPassword(password, user.get().getHashPassword())) {
-            return user;
-        }
-        return Optional.empty();
+        if (user.isPresent()) {
+            User current_user = user.get();
+            if (userService.checkUserByPassword(password, user.get().getHashPassword())) {
+                String token = Jwts.builder()
+                        .setSubject(current_user.getId().toString()) // id пользователя
+                        .claim("name", current_user.getEmail()) // имя
+                        .claim("role", current_user.getRole().name()) // роль
+                        .signWith(SignatureAlgorithm.HS256, secret) // подписываем его с нашим secret
+                        .compact(); // преобразовали в строку
+            return new TokenDto(token);
+            } else throw new AccessDeniedException("Wrong email/password");
+        } else  throw new AccessDeniedException("User not found");
     }
 }
