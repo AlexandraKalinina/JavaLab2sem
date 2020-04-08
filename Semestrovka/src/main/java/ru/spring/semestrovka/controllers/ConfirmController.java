@@ -41,7 +41,8 @@ public class ConfirmController {
             SignUpDto signUpDto = (SignUpDto) session.getAttribute("user");
             Optional<User> user = userService.getUserBySignUpDto(signUpDto);
             if (user.isPresent()) {
-                return "redirect:/profile/" + user.get().getId();
+                //return "redirect:/profile/" + user.get().getId();
+                return "redirect:/profile";
             } else {
                 return "redirect:/registration";
             }

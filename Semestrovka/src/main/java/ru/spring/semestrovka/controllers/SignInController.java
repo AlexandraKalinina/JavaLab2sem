@@ -35,7 +35,7 @@ public class SignInController {
             if (session.getAttribute("user") == null) {
                 session.setAttribute("user", signInDto);
             }
-            return new ModelAndView("redirect:/profile");
+            return new ModelAndView("redirect:/profile/");
         } else return new ModelAndView("redirect:/signIn");
         //TO DO: cookie
     }

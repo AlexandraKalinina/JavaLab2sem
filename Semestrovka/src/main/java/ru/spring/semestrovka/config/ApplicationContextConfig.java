@@ -13,19 +13,15 @@ import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.Database;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
-import org.springframework.security.authentication.AuthenticationProvider;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-import org.springframework.web.filter.GenericFilterBean;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver;
-import ru.spring.semestrovka.repositories.UserRepositories;
-import ru.spring.semestrovka.repositories.UserRepositoriesImpl;
-import ru.spring.semestrovka.security.details.UserDetailsServiceImpl;
-import ru.spring.semestrovka.security.jwt.filter.JwtAuthenticationFilter;
-import ru.spring.semestrovka.security.jwt.provider.JwtAuthenticationProvider;
+import ru.spring.semestrovka.helpers.Reader;
+import ru.spring.semestrovka.model.Book;
+import ru.spring.semestrovka.repositories.*;
+
 import ru.spring.semestrovka.service.*;
 
 import javax.persistence.EntityManagerFactory;
@@ -148,7 +144,7 @@ public class ApplicationContextConfig {
         return new UserServiceImpl();
     }
 
-    @Bean
+   /* @Bean
     public UserDetailsService customUserDetailsService() {
         return new UserDetailsServiceImpl();
     }
@@ -159,7 +155,7 @@ public class ApplicationContextConfig {
     @Bean
     public GenericFilterBean genericFilterBean() {
         return new JwtAuthenticationFilter();
-    }
+    }*/
    /* @Bean
     public Authentication authentication() {
         return new JwtAuthentication();
@@ -192,6 +188,37 @@ public class ApplicationContextConfig {
         properties.setProperty("hibernate.dialect", "org.hibernate.dialect.PostgreSQL95Dialect");
         properties.setProperty("hibernate.show_sql", "true");
         return properties;
+    }
+    @Bean
+    public Reader reader(){
+        return new Reader();
+    }
+    @Bean
+    public BookRepositories bookRepositories() {
+        return new BookRepositoriesImpl();
+    }
+    @Bean
+    public BookService bookService() {
+        return new BookServiceImpl();
+    }
+
+    @Bean
+    public AuthorRepositories authorRepositories() {
+        return new AuthorRepositoriesImpl();
+    }
+
+    @Bean
+    public AuthorService authorService() {
+        return new AuthorServiceImpl();
+    }
+
+    @Bean
+    public GenreRepositories genreRepositories() {
+        return new GenreRepositoriesImpl();
+    }
+    @Bean
+    public GenreService genreService() {
+        return new GenreServiceImpl();
     }
 }
 
