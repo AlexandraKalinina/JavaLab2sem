@@ -25,7 +25,7 @@ public class BookRepositoriesImpl implements BookRepositories {
 
     private static final String SQL_DELETE_BY_ID = "delete from books where id=?;";
 
-    private static final String SQL_SELECT_BY_NAME = "select * from books where name=? and text=?;";
+    private static final String SQL_SELECT_BY_NAME = "select * from books where text=?;";
 
     private RowMapper<Book> bookRowMapper = (row, rowNumber) ->
             Book.builder().id(row.getLong("id"))
@@ -70,9 +70,9 @@ public class BookRepositoriesImpl implements BookRepositories {
     }
 
     @Override
-    public Optional<Book> getUserByName(String name, String link) {
+    public Optional<Book> getBookByPath(String text) {
         try {
-            Book book = jdbcTemplate.queryForObject(SQL_SELECT_BY_NAME, new Object[]{name, link}, bookRowMapper);
+            Book book = jdbcTemplate.queryForObject(SQL_SELECT_BY_NAME, new Object[]{text}, bookRowMapper);
             return Optional.ofNullable(book);
         } catch (EmptyResultDataAccessException e) {
             return Optional.empty();

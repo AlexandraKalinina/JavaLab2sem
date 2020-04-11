@@ -18,10 +18,9 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver;
-import ru.spring.semestrovka.helpers.Reader;
-import ru.spring.semestrovka.model.Book;
+import ru.spring.semestrovka.helpers.ReaderHelper;
+import ru.spring.semestrovka.helpers.ReaderHelperImpl;
 import ru.spring.semestrovka.repositories.*;
-
 import ru.spring.semestrovka.service.*;
 
 import javax.persistence.EntityManagerFactory;
@@ -92,6 +91,7 @@ public class ApplicationContextConfig {
         resolver.setCache(true);
         resolver.setPrefix("");
         resolver.setSuffix(".ftl");
+        resolver.setContentType("text/html;charset=UTF-8");
         return resolver;
     }
 
@@ -190,10 +190,6 @@ public class ApplicationContextConfig {
         return properties;
     }
     @Bean
-    public Reader reader(){
-        return new Reader();
-    }
-    @Bean
     public BookRepositories bookRepositories() {
         return new BookRepositoriesImpl();
     }
@@ -219,6 +215,10 @@ public class ApplicationContextConfig {
     @Bean
     public GenreService genreService() {
         return new GenreServiceImpl();
+    }
+    @Bean
+    public ReaderHelper readerHelper() {
+        return new ReaderHelperImpl();
     }
 }
 

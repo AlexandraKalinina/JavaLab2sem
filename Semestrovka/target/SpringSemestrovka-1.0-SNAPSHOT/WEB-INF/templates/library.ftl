@@ -9,12 +9,23 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
 <body>
-<h1>Welcome!</h1>
-<form method="get" action="/library/signUp">
-    <input type="submit" value="SignUp">
-</form>
-<form method="get" action="/library/signIn">
-    <input type="submit" value="SignIn">
-</form>
+
+<div class="container">
+    <div class="row">
+        <h1>Welcome!</h1>
+        <form method="get" action="/library/signUp">
+            <input type="submit" value="SignUp">
+        </form>
+        <form method="get" action="/library/signIn">
+            <input type="submit" value="SignIn">
+        </form>
+    </div>
+    <div class="row">
+        <h1>Books</h1>
+        <form method="get" action="/library/book">
+            <input type="submit" value="book">
+        </form>
+    </div>
+</div>
 </body>
 </html>

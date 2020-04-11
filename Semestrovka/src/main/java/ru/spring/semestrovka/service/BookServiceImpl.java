@@ -23,19 +23,20 @@ public class BookServiceImpl implements BookService {
                 .name(name)
                 .text(link)
                 .build();
-        Optional<Book> book = bookRepositories.getUserByName(name, link);
+        Optional<Book> book = bookRepositories.getBookByPath(link);
         if (!book.isPresent()) {
             bookRepositories.save(current_book);
-            return bookRepositories.getUserByName(name, link);
+            return bookRepositories.getBookByPath(link);
         } else {
             List<Author> authors = authorRepositories.getAuthorsByIdBook(book.get().getId());
             if (authors.size() == 0) {
                 bookRepositories.save(current_book);
-                return bookRepositories.getUserByName(name, link);
+                return bookRepositories.getBookByPath(link);
             }
             return book;
         }
     }
+
 
 
 }

@@ -33,9 +33,9 @@ public class AuthorServiceImpl implements AuthorService {
         List<Author> authors = authorRepositories.getAuthorsByIdBook(author.getId_book());
         if (authors.size() != 0) {
             for (Author a: authors) {
-                if (a.getName().equals(author.getName()) &&
-                        a.getSurname().equals(author.getName())
-                        && a.getPatronymic().equals(author.getPatronymic())) {
+                if (a.getName().equals(author.getName()) &
+                        a.getSurname().equals(author.getSurname())
+                        & a.getPatronymic().equals(author.getPatronymic())) {
                     return Optional.of(a);
                 }
             }

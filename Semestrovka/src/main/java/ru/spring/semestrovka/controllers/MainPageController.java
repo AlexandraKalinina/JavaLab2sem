@@ -21,4 +21,8 @@ public class MainPageController {
     public ModelAndView signIn() {
         return new ModelAndView("redirect:/signIn");
     }
+    @RequestMapping(value = "/library/book", method = RequestMethod.GET)
+    public ModelAndView book() {
+        return new ModelAndView("redirect:/book");
+    }
 }
