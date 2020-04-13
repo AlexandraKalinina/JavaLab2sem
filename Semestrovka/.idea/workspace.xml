@@ -116,6 +116,32 @@
                 <option name="domain" value="localhost" />
                 <option name="name" value="JSESSIONID" />
                 <option name="path" value="/" />
+                <option name="value" value="83EAD84F489980F4943DA2B0F49CFD48" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/profileRest" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzIiwibmFtZSI6ImFsZWtza2FsaW4xbmFAeWFuZGV4LnJ1Iiwicm9sZSI6IlVTRVIifQ.rI5Cqm3WsS_wT819rbvV2Z4pWcr8L5csYDsAVdKUSiQ" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
                 <option name="value" value="223474DD0253C45537A42649F14F32EE" />
               </Biscuit>
             </list>
@@ -898,7 +924,7 @@
       <workItem from="1586768851266" duration="1095000" />
       <workItem from="1586770041463" duration="8652000" />
       <workItem from="1586779973463" duration="3921000" />
-      <workItem from="1586793280734" duration="5300000" />
+      <workItem from="1586793280734" duration="7594000" />
     </task>
     <servers />
   </component>
