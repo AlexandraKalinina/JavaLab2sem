@@ -1,6 +1,7 @@
 package ru.spring.semestrovka.helpers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import ru.spring.semestrovka.model.Author;
 import ru.spring.semestrovka.model.Book;
 import ru.spring.semestrovka.model.Genre;
@@ -12,7 +13,7 @@ import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.*;
 
-
+@Component
 public class ReaderHelperImpl implements ReaderHelper {
 
     @Autowired
@@ -45,11 +46,13 @@ public class ReaderHelperImpl implements ReaderHelper {
         }
         data.add(text);
         Optional<Book> book = bookService.readFile(data.get(0), path);
-        Book newBook = new Book(book.get().getId(), book.get().getName(), data.get(5));
+        //to do: сделать чтобы возвращался лист авторов, а не один автор и кидать в книгу,
+        // а одну книгу в контроллер, без листов с авторами и тд
+        Book newBook = new Book(book.get().getName(), data.get(5));
         books.add(newBook);
-        Optional<Author> author = authorService.readFile(data.get(1),data.get(2),data.get(3), book.get().getId());
+        Optional<Author> author = authorService.readFile(data.get(1),data.get(2),data.get(3), book.get());
         authors.add(author.get());
-        Optional<Genre> genre = genreService.readFile(data.get(4), book.get().getId());
+        Optional<Genre> genre = genreService.readFile(data.get(4), book.get());
         genres.add(genre.get());
     }
 

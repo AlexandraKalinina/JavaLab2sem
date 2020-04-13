@@ -18,9 +18,6 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver;
-import ru.spring.semestrovka.helpers.ReaderHelper;
-import ru.spring.semestrovka.helpers.ReaderHelperImpl;
-import ru.spring.semestrovka.repositories.*;
 import ru.spring.semestrovka.service.*;
 
 import javax.persistence.EntityManagerFactory;
@@ -32,6 +29,7 @@ import java.util.Properties;
 @ComponentScan(basePackages = "ru.spring.semestrovka")
 @EnableAspectJAutoProxy
 @EnableTransactionManagement
+
 public class ApplicationContextConfig {
     @Autowired
     private Environment environment;
@@ -107,64 +105,18 @@ public class ApplicationContextConfig {
         freeMarkerConfigurer.setDefaultEncoding("UTF-8");
         return freeMarkerConfigurer;
     }
-
-    @Bean
-    public ConfirmService confirmService() {
-        return new ConfirmServiceImpl();
-    }
-
-    @Bean
-    public UserRepositories userRepositories() {
-        return new UserRepositoriesImpl();
-    }
-
-    @Bean
-    public EmailService emailService() {
-        return new EmailServiceImpl();
-    }
-
-    @Bean
-    public SignUpService signUpService() {
-        return new SignUpServiceImpl();
-    }
-
-
-    @Bean
-    public SignInService signInService() {
-        return new SignInServiceImpl();
-    }
-
     @Bean
     public BCryptPasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
-    @Bean
-    public UserService userService() {
-        return new UserServiceImpl();
-    }
 
-   /* @Bean
-    public UserDetailsService customUserDetailsService() {
-        return new UserDetailsServiceImpl();
-    }
-    @Bean
-    public AuthenticationProvider authenticationProvider() {
-        return new JwtAuthenticationProvider();
-    }
-    @Bean
-    public GenericFilterBean genericFilterBean() {
-        return new JwtAuthenticationFilter();
-    }*/
-   /* @Bean
-    public Authentication authentication() {
-        return new JwtAuthentication();
-    }*/
-    @Bean
-    public PlatformTransactionManager transactionManager(EntityManagerFactory entityManagerFactory){
-        JpaTransactionManager transactionManager = new JpaTransactionManager();
-        transactionManager.setEntityManagerFactory(entityManagerFactory);
-        return transactionManager;
+    private Properties additionalProperties() {
+        Properties properties = new Properties();
+        properties.setProperty("hibernate.hbm2ddl.auto", "none");
+        properties.setProperty("hibernate.dialect", "org.hibernate.dialect.PostgreSQL95Dialect");
+        properties.setProperty("hibernate.show_sql", "true");
+        return properties;
     }
 
     // штука, которая позволяет создавать бины EntityManager
@@ -182,43 +134,12 @@ public class ApplicationContextConfig {
         return entityManagerFactory;
     }
 
-    private Properties additionalProperties() {
-        Properties properties = new Properties();
-        properties.setProperty("hibernate.hbm2ddl.auto", "create");
-        properties.setProperty("hibernate.dialect", "org.hibernate.dialect.PostgreSQL95Dialect");
-        properties.setProperty("hibernate.show_sql", "true");
-        return properties;
-    }
     @Bean
-    public BookRepositories bookRepositories() {
-        return new BookRepositoriesImpl();
-    }
-    @Bean
-    public BookService bookService() {
-        return new BookServiceImpl();
+    public PlatformTransactionManager transactionManager(EntityManagerFactory entityManagerFactory){
+        JpaTransactionManager transactionManager = new JpaTransactionManager();
+        transactionManager.setEntityManagerFactory(entityManagerFactory);
+        return transactionManager;
     }
 
-    @Bean
-    public AuthorRepositories authorRepositories() {
-        return new AuthorRepositoriesImpl();
-    }
-
-    @Bean
-    public AuthorService authorService() {
-        return new AuthorServiceImpl();
-    }
-
-    @Bean
-    public GenreRepositories genreRepositories() {
-        return new GenreRepositoriesImpl();
-    }
-    @Bean
-    public GenreService genreService() {
-        return new GenreServiceImpl();
-    }
-    @Bean
-    public ReaderHelper readerHelper() {
-        return new ReaderHelperImpl();
-    }
 }
 

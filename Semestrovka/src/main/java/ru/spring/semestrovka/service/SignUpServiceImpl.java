@@ -2,6 +2,7 @@ package ru.spring.semestrovka.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Service;
 import ru.spring.semestrovka.dto.SignUpDto;
 import ru.spring.semestrovka.model.Role;
 import ru.spring.semestrovka.model.State;
@@ -11,6 +12,7 @@ import ru.spring.semestrovka.repositories.UserRepositories;
 import java.util.Optional;
 import java.util.UUID;
 
+@Service
 public class SignUpServiceImpl implements SignUpService {
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
@@ -26,7 +28,7 @@ public class SignUpServiceImpl implements SignUpService {
         User user = User.builder()
                 .name(form.getName())
                 .email(form.getEmail())
-                .hashPassword(bCryptPasswordEncoder.encode(form.getPassword()))
+                .password(bCryptPasswordEncoder.encode(form.getPassword()))
                 .state(State.NOT_CONFIRMED)
                 .role(Role.USER)
                 .confirmCode(UUID.randomUUID().toString())

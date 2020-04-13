@@ -6,6 +6,8 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 import ru.spring.semestrovka.model.Role;
 import ru.spring.semestrovka.model.State;
 import ru.spring.semestrovka.model.User;
@@ -13,7 +15,7 @@ import ru.spring.semestrovka.model.User;
 import java.sql.PreparedStatement;
 import java.util.List;
 import java.util.Optional;
-
+@Component
 public class UserRepositoriesImpl implements UserRepositories {
 
     @Autowired
@@ -37,7 +39,7 @@ public class UserRepositoriesImpl implements UserRepositories {
             User.builder().id(row.getLong("id"))
                     .name(row.getString("name"))
                     .email(row.getString("email"))
-                    .hashPassword(row.getString("password"))
+                    .password(row.getString("password"))
                     .state(State.valueOf(row.getString("state")))
                     .role(Role.valueOf(row.getString("role")))
                     .confirmCode(row.getString("confirmcode"))
@@ -90,7 +92,7 @@ public class UserRepositoriesImpl implements UserRepositories {
             PreparedStatement statement = connection
                     .prepareStatement(SQL_INSERT);
             statement.setString(1, object.getName());
-            statement.setString(2, object.getHashPassword());
+            statement.setString(2, object.getPassword());
             statement.setString(3, object.getEmail());
             statement.setString(4, object.getState().toString());
             statement.setString(5, object.getRole().toString());

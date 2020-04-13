@@ -1,6 +1,7 @@
 package ru.spring.semestrovka.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -20,7 +21,7 @@ public class BookController {
     @Autowired
     private ReaderHelper readerHelper;
 
-
+    @PreAuthorize("permitAll()")
     @RequestMapping(value = "/book", method = RequestMethod.GET)
     public ModelAndView book() throws FileNotFoundException {
         ModelAndView modelAndView = new ModelAndView();

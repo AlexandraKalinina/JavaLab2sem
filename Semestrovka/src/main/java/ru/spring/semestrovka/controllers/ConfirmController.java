@@ -23,7 +23,7 @@ public class ConfirmController {
     @Autowired
     private UserService userService;
 
-    //@PreAuthorize("permitAll()")
+    @PreAuthorize("permitAll()")
     @RequestMapping(value = "/confirm/*", method = RequestMethod.GET)
     public ModelAndView confirmCreate(HttpSession session) {
         ModelAndView modelAndView = new ModelAndView();
@@ -34,7 +34,7 @@ public class ConfirmController {
         }
         return modelAndView;
     }
-    //@PreAuthorize("permitAll()")
+    @PreAuthorize("permitAll()")
     @RequestMapping(value = "/confirm/redirect", method = RequestMethod.GET)
     public String redirectWithUsingRedirectPrefix(HttpSession session) {
         if (session.getAttribute("user") != null) {

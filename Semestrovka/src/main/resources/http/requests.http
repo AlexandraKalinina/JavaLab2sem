@@ -1,0 +1,13 @@
+POST http://localhost:8080/signInRest
+Content-Type: application/json
+
+{
+"email" : "alekskalin1na@yandex.ru",
+"password" : "123"
+}
+###
+
+GET http://localhost:8080/profileRest
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzIiwibmFtZSI6ImFsZWtza2FsaW4xbmFAeWFuZGV4LnJ1Iiwicm9sZSI6IlVTRVIifQ.rI5Cqm3WsS_wT819rbvV2Z4pWcr8L5csYDsAVdKUSiQ
+
+###

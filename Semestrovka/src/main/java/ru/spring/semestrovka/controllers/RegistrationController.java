@@ -1,6 +1,7 @@
 package ru.spring.semestrovka.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,14 +19,14 @@ public class RegistrationController {
     @Autowired
     private SignUpService signUpService;
 
-    //@PreAuthorize("permitAll()")
+    @PreAuthorize("permitAll()")
     @RequestMapping(value = "/registration", method = RequestMethod.GET)
     public ModelAndView registrationCreate() {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("registration");
         return modelAndView;
     }
-    //@PreAuthorize("permitAll()")
+    @PreAuthorize("permitAll()")
     @RequestMapping(value = "/registration", method = RequestMethod.POST)
     public ModelAndView registration(@ModelAttribute(name = "user") SignUpDto signUpDto, HttpServletRequest req) {
         HttpSession session = req.getSession();
