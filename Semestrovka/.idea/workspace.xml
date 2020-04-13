@@ -924,7 +924,7 @@
       <workItem from="1586768851266" duration="1095000" />
       <workItem from="1586770041463" duration="8652000" />
       <workItem from="1586779973463" duration="3921000" />
-      <workItem from="1586793280734" duration="7594000" />
+      <workItem from="1586793280734" duration="8134000" />
     </task>
     <servers />
   </component>
@@ -1043,26 +1043,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/helpers/ReaderHelperImpl.java</url>
           <line>51</line>
           <option name="timeStamp" value="136" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/repositories/jpa/AuthorRepositoriesImplJpa.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="141" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/repositories/jpa/AuthorRepositoriesImplJpa.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="142" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/repositories/jpa/AuthorRepositoriesImplJpa.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="143" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/repositories/jpa/AuthorRepositoriesImplJpa.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="144" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/service/ConfirmServiceImpl.java</url>
@@ -1262,12 +1242,6 @@
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="127" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/repositories/jpa/AuthorRepositoriesImplJpa.java</url>
-          <line>30</line>
-          <properties class="ru.spring.semestrovka.repositories.jpa.AuthorRepositoriesImplJpa" method="getAuthorsByIdBook" />
-          <option name="timeStamp" value="137" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/service/ConfirmServiceImpl.java</url>
