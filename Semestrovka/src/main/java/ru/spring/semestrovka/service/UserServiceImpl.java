@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+import ru.spring.semestrovka.dto.SignInDto;
 import ru.spring.semestrovka.dto.SignUpDto;
 import ru.spring.semestrovka.model.User;
 import ru.spring.semestrovka.repositories.UserRepositories;
@@ -25,6 +26,12 @@ public class UserServiceImpl implements UserService {
     @Override
     public Optional<User> getUserBySignUpDto(SignUpDto signUpDto) {
         String email = signUpDto.getEmail();
+        return userRepositories.getUserByLogin(email);
+    }
+
+    @Override
+    public Optional<User> getUserBySignInDto(SignInDto signInDto) {
+        String email = signInDto.getEmail();
         return userRepositories.getUserByLogin(email);
     }
 }

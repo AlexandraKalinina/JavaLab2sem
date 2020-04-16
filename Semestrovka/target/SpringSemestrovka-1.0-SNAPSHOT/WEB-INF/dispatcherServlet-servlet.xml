@@ -9,4 +9,5 @@
 
     <aop:aspectj-autoproxy proxy-target-class="true"/>
     <aop:aspectj-autoproxy/>
+    <mvc:resources mapping= "/static/js/**" location="/static/js/"/>
 </beans>

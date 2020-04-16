@@ -21,19 +21,28 @@ public class BookController {
     @Autowired
     private ReaderHelper readerHelper;
 
+    private Book book;
+
     @PreAuthorize("permitAll()")
     @RequestMapping(value = "/book", method = RequestMethod.GET)
     public ModelAndView book() throws FileNotFoundException {
         ModelAndView modelAndView = new ModelAndView();
-        readerHelper.loaderFile("books/Letters.txt");
-        List<Book> books = readerHelper.getListBook();
-        List<Author> authors = readerHelper.getListAuthor();
-        List<Genre> genres = readerHelper.getListGenre();
+        book = readerHelper.loaderFile("books/Letters.txt");
+        List<Book> books = new ArrayList<>();
+        books.add(book);
+        List<Author> authors = book.getAuthors();
+        List<Genre> genres = book.getGenres();
         modelAndView.addObject("books", books);
         modelAndView.addObject("authors", authors);
         modelAndView.addObject("genres", genres);
         modelAndView.setViewName("book");
         return modelAndView;
+    }
+    @RequestMapping(value = "/book/chat", method = RequestMethod.GET)
+    public ModelAndView comment() {
+        if (book != null) {
+            return new ModelAndView("redirect:/chat/" + book.getId());
+        } else return new ModelAndView("book");
     }
 
 

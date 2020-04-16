@@ -9,6 +9,9 @@
 
 </head>
 <body>
-<h1>My profile</h1>
+<h1>Моя страница</h1>
+<form method="get" action="/library">
+    <input type="submit" value="Главная страница">
+</form>
 </body>
 </html>

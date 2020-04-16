@@ -24,6 +24,9 @@ public class BookRepositoriesImplJpa implements BookRepositories {
     //language=HQL
     private static final String HQL_SELECT_ALL = "from Book";
 
+    //language=HQL
+    private static final String HQL_SELECT_BY_NAME = "from Book b where b.name =:name";
+
     @Override
     @Transactional
     public Optional<Book> getBookByPath(String path) {
@@ -35,6 +38,15 @@ public class BookRepositoriesImplJpa implements BookRepositories {
             return Optional.empty();
         }
         return Optional.ofNullable(book);
+    }
+
+    @Override
+    @Transactional
+    public List<Book> getBooksByName(String name) {
+        List books = entityManager.createQuery(HQL_SELECT_BY_NAME)
+                .setParameter("name", name)
+                .getResultList();
+        return books;
     }
 
     @Override

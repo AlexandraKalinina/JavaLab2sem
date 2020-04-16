@@ -21,6 +21,9 @@
     <#list books as book>
         <h4>${book.text}</h4>
     </#list>
+    <form method="get" action="/book/chat">
+        <input type="submit" value="Комментировать">
+    </form>
 </div>
 </body>
 </html>

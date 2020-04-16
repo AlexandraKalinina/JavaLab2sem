@@ -28,9 +28,11 @@ public class ConfirmController {
     public ModelAndView confirmCreate(HttpSession session) {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("confirm");
+        //полностью переделать
+        //сделать только подтверждение и всё
         if (session.getAttribute("user") != null) {
-            SignUpDto signUpDto = (SignUpDto) session.getAttribute("user");
-            confirmService.updateSate(signUpDto.getEmail());
+            Optional<User> user = (Optional<User>) session.getAttribute("user");
+            confirmService.updateSate(user.get().getEmail());
         }
         return modelAndView;
     }
@@ -38,8 +40,7 @@ public class ConfirmController {
     @RequestMapping(value = "/confirm/redirect", method = RequestMethod.GET)
     public String redirectWithUsingRedirectPrefix(HttpSession session) {
         if (session.getAttribute("user") != null) {
-            SignUpDto signUpDto = (SignUpDto) session.getAttribute("user");
-            Optional<User> user = userService.getUserBySignUpDto(signUpDto);
+            Optional<User> user = (Optional<User>)  session.getAttribute("user");
             if (user.isPresent()) {
                 //return "redirect:/profile/" + user.get().getId();
                 return "redirect:/profile";

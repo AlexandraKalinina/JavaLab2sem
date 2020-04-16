@@ -1,3 +1,50 @@
+GET http://localhost:8080/messages?pageId=FIRST_PAGE
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-04-14T094135.200.json
+
+###
+
+POST http://localhost:8080/messages
+Content-Type: application/json
+
+{
+  "pageId" : "FIRST_PAGE",
+  "text" : "Bye!"
+}
+
+###
+
+POST http://localhost:8080/messages
+Content-Type: application/json
+
+{
+  "pageId" : "FIRST_PAGE",
+  "text" : "Bye!"
+}
+
+###
+
+GET http://localhost:8080/profileRest
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzIiwibmFtZSI6ImFsZWtza2FsaW4xbmFAeWFuZGV4LnJ1Iiwicm9sZSI6IlVTRVIifQ.rI5Cqm3WsS_wT819rbvV2Z4pWcr8L5csYDsAVdKUSiQ
+
+<> 2020-04-13T092028.200.json
+
+###
+
+POST http://localhost:8080/signInRest
+Content-Type: application/json
+
+{
+"email" : "alekskalin1na@yandex.ru",
+"password" : "123"
+}
+
+<> 2020-04-13T092023.200.json
+
+###
+
 GET http://localhost:8080/profileRest
 Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzIiwibmFtZSI6ImFsZWtza2FsaW4xbmFAeWFuZGV4LnJ1Iiwicm9sZSI6IlVTRVIifQ.rI5Cqm3WsS_wT819rbvV2Z4pWcr8L5csYDsAVdKUSiQ
 

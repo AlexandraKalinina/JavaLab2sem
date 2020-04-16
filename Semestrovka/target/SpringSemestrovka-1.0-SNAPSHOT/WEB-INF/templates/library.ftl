@@ -6,7 +6,10 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -26,6 +29,37 @@
             <input type="submit" value="book">
         </form>
     </div>
+
 </div>
+
+<p><input id="query" oninput="f()"/></p>
+
+<div id="res"></div>
+
+<script type="application/javascript">
+    function search() {
+        if ($("#query").val().length >= 1) {
+            $.ajax({
+                url: "/search",
+                method: "GET",
+                data: {"query": $("#query").val()},
+                dataType: "json",
+                success: function (msg) {
+                    if (msg.objects.length > 0) {
+                        $("#res").html("");
+                        for (var i = 0; i < msg.objects.length; i++) {
+                            $("#res").append("<li>" + msg.objects[i].name + "</li>");
+                        }
+                    } else {
+                        $("#res").html("No results..");
+                    }
+                }
+            })
+        }
+        else {
+            $("#res").html("");
+        }
+    }
+</script>
 </body>
 </html>

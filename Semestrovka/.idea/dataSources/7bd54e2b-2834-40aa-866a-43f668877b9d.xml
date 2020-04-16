@@ -20,12 +20,13 @@
     <database id="5" parent="1" name="Library">
       <ObjectId>41801</ObjectId>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>523850</IntrospectionStateNumber>
+      <IntrospectionStateNumber>523856</IntrospectionStateNumber>
       <Current>1</Current>
-      <Relations>sequence|table|42460|42462|1
-sequence|table|42386|42388|1
+      <Relations>sequence|table|42386|42388|1
 sequence|table|42397|42399|1
 sequence|table|42408|42410|1
+sequence|table|42460|42462|1
+sequence|table|42487|42489|1
 </Relations>
     </database>
     <database id="6" parent="1" name="Products">
@@ -110,7 +111,7 @@ sequence|table|42408|42410|1
       <Comment>standard public schema</Comment>
       <StateNumber>360</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>523851</IntrospectionStateNumber>
+      <IntrospectionStateNumber>523857</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <access-method id="26" parent="5" name="btree">
@@ -193,7 +194,15 @@ sequence|table|42408|42410|1
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
-    <sequence id="36" parent="25" name="users_id_seq">
+    <sequence id="36" parent="25" name="message_id_seq">
+      <ObjectId>42487</ObjectId>
+      <StateNumber>523855</StateNumber>
+      <Owner>postgres</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="37" parent="25" name="users_id_seq">
       <ObjectId>42460</ObjectId>
       <StateNumber>523836</StateNumber>
       <Owner>postgres</Owner>
@@ -201,27 +210,32 @@ sequence|table|42408|42410|1
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
-    <table id="37" parent="25" name="author">
+    <table id="38" parent="25" name="author">
       <ObjectId>42388</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>523792</StateNumber>
     </table>
-    <table id="38" parent="25" name="book">
+    <table id="39" parent="25" name="book">
       <ObjectId>42399</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>523792</StateNumber>
     </table>
-    <table id="39" parent="25" name="genre">
+    <table id="40" parent="25" name="genre">
       <ObjectId>42410</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>523793</StateNumber>
     </table>
-    <table id="40" parent="25" name="users">
+    <table id="41" parent="25" name="message">
+      <ObjectId>42489</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>523855</StateNumber>
+    </table>
+    <table id="42" parent="25" name="users">
       <ObjectId>42462</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>523836</StateNumber>
+      <StateNumber>523855</StateNumber>
     </table>
-    <column id="41" parent="37" name="id">
+    <column id="43" parent="38" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
@@ -229,45 +243,45 @@ sequence|table|42408|42410|1
       <DefaultExpression>nextval(&apos;author_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="42" parent="37" name="name">
+    <column id="44" parent="38" name="name">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>523789</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="43" parent="37" name="patronymic">
+    <column id="45" parent="38" name="patronymic">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>523789</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="44" parent="37" name="surname">
+    <column id="46" parent="38" name="surname">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>523789</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="45" parent="37" name="id_book">
+    <column id="47" parent="38" name="id_book">
       <Position>5</Position>
       <DataType>bigint|0s</DataType>
       <StateNumber>523789</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <index id="46" parent="37" name="author_pkey">
+    <index id="48" parent="38" name="author_pkey">
       <ObjectId>42395</ObjectId>
       <StateNumber>523789</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="47" parent="37" name="author_pkey">
+    <key id="49" parent="38" name="author_pkey">
       <ObjectId>42396</ObjectId>
       <StateNumber>523789</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>author_pkey</UnderlyingIndexName>
     </key>
-    <foreign-key id="48" parent="37" name="fkjs0qxha0n2yoaaq7dn65fpsv1">
+    <foreign-key id="50" parent="38" name="fkjs0qxha0n2yoaaq7dn65fpsv1">
       <ObjectId>42416</ObjectId>
       <StateNumber>523792</StateNumber>
       <ColNames>id_book</ColNames>
@@ -277,7 +291,7 @@ sequence|table|42408|42410|1
       <RefKeyName>book_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="49" parent="38" name="id">
+    <column id="51" parent="39" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
@@ -285,33 +299,33 @@ sequence|table|42408|42410|1
       <DefaultExpression>nextval(&apos;book_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="50" parent="38" name="name">
+    <column id="52" parent="39" name="name">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>523790</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="51" parent="38" name="text">
+    <column id="53" parent="39" name="text">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>523790</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="52" parent="38" name="book_pkey">
+    <index id="54" parent="39" name="book_pkey">
       <ObjectId>42406</ObjectId>
       <StateNumber>523790</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="53" parent="38" name="book_pkey">
+    <key id="55" parent="39" name="book_pkey">
       <ObjectId>42407</ObjectId>
       <StateNumber>523790</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>book_pkey</UnderlyingIndexName>
     </key>
-    <column id="54" parent="39" name="id">
+    <column id="56" parent="40" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
@@ -319,33 +333,33 @@ sequence|table|42408|42410|1
       <DefaultExpression>nextval(&apos;genre_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="55" parent="39" name="name">
+    <column id="57" parent="40" name="name">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>523791</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="56" parent="39" name="id_book">
+    <column id="58" parent="40" name="id_book">
       <Position>3</Position>
       <DataType>bigint|0s</DataType>
       <StateNumber>523791</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <index id="57" parent="39" name="genre_pkey">
+    <index id="59" parent="40" name="genre_pkey">
       <ObjectId>42414</ObjectId>
       <StateNumber>523791</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="58" parent="39" name="genre_pkey">
+    <key id="60" parent="40" name="genre_pkey">
       <ObjectId>42415</ObjectId>
       <StateNumber>523791</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>genre_pkey</UnderlyingIndexName>
     </key>
-    <foreign-key id="59" parent="39" name="fktm7sxue5sg0xr012es0ph5h4l">
+    <foreign-key id="61" parent="40" name="fktm7sxue5sg0xr012es0ph5h4l">
       <ObjectId>42421</ObjectId>
       <StateNumber>523793</StateNumber>
       <ColNames>id_book</ColNames>
@@ -355,7 +369,67 @@ sequence|table|42408|42410|1
       <RefKeyName>book_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="60" parent="40" name="id">
+    <column id="62" parent="41" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>523855</StateNumber>
+      <DefaultExpression>nextval(&apos;message_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="63" parent="41" name="text">
+      <Position>2</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>523855</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="64" parent="41" name="id_user">
+      <Position>3</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>523855</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="65" parent="41" name="id_book">
+      <Position>4</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>523855</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <index id="66" parent="41" name="message_pkey">
+      <ObjectId>42496</ObjectId>
+      <StateNumber>523855</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="67" parent="41" name="message_pkey">
+      <ObjectId>42497</ObjectId>
+      <StateNumber>523855</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>message_pkey</UnderlyingIndexName>
+    </key>
+    <foreign-key id="68" parent="41" name="message_id_user_fkey">
+      <ObjectId>42498</ObjectId>
+      <StateNumber>523855</StateNumber>
+      <ColNames>id_user</ColNames>
+      <RefTableId>42462</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>users</RefTableName>
+      <RefKeyName>users_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="69" parent="41" name="message_id_book_fkey">
+      <ObjectId>42503</ObjectId>
+      <StateNumber>523855</StateNumber>
+      <ColNames>id_book</ColNames>
+      <RefTableId>42399</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>book</RefTableName>
+      <RefKeyName>book_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="70" parent="42" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -363,50 +437,50 @@ sequence|table|42408|42410|1
       <DefaultExpression>nextval(&apos;users_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="61" parent="40" name="name">
+    <column id="71" parent="42" name="name">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>523836</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="62" parent="40" name="email">
+    <column id="72" parent="42" name="email">
       <Position>3</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>523836</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="63" parent="40" name="password">
+    <column id="73" parent="42" name="password">
       <Position>4</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>523836</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="64" parent="40" name="state">
+    <column id="74" parent="42" name="state">
       <Position>5</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>523836</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="65" parent="40" name="role">
+    <column id="75" parent="42" name="role">
       <Position>6</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>523836</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="66" parent="40" name="confirmcode">
+    <column id="76" parent="42" name="confirmcode">
       <Position>7</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>523836</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="67" parent="40" name="users_pkey">
+    <index id="77" parent="42" name="users_pkey">
       <ObjectId>42469</ObjectId>
       <StateNumber>523836</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="68" parent="40" name="users_pkey">
+    <key id="78" parent="42" name="users_pkey">
       <ObjectId>42470</ObjectId>
       <StateNumber>523836</StateNumber>
       <ColNames>id</ColNames>

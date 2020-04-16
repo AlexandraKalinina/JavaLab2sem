@@ -8,6 +8,7 @@ import ru.spring.semestrovka.model.Book;
 import ru.spring.semestrovka.model.Genre;
 import ru.spring.semestrovka.repositories.GenreRepositories;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -19,30 +20,30 @@ public class GenreServiceImpl implements GenreService {
     public GenreRepositories genreRepositories;
 
     @Override
-    public Optional<Genre> readFile(String name, Book book) {
+    public List<Genre> readFile(String name, Book book) {
         Genre current_genre = Genre.builder()
                 .name(name)
                 .book(book)
                 .build();
-        Optional<Genre> genre = getGenre(current_genre);
-        if (!genre.isPresent()) {
+        List<Genre> genres = getGenre(current_genre);
+        if (genres.size() == 0) {
             genreRepositories.save(current_genre);
             return getGenre(current_genre);
         }
-        else return genre;
+        else return genres;
     }
 
     @Override
-    public Optional<Genre> getGenre(Genre genre) {
+    public List<Genre> getGenre(Genre genre) {
         List<Genre> genres = genreRepositories.getGenreByIdBook(genre.getBook());
         if (genres.size() != 0) {
             for (Genre g : genres) {
                 if (g.getName().equals(genre.getName())) {
-                    return Optional.of(g);
+                    return genres;
                 }
             }
         }
-        return Optional.empty();
+        return new ArrayList<>();
     }
 
 }

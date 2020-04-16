@@ -11,3 +11,20 @@ GET http://localhost:8080/profileRest
 Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzIiwibmFtZSI6ImFsZWtza2FsaW4xbmFAeWFuZGV4LnJ1Iiwicm9sZSI6IlVTRVIifQ.rI5Cqm3WsS_wT819rbvV2Z4pWcr8L5csYDsAVdKUSiQ
 
 ###
+
+POST http://localhost:8080/messages
+Content-Type: application/json
+
+{
+  "pageId" : "FIRST_PAGE",
+  "text" : "Bye!"
+}
+
+###
+
+GET http://localhost:8080/messages?userId=FIRST_PAGE
+Accept: */*
+Cache-Control: no-cache
+
+###
+

@@ -7,7 +7,7 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
+
 import ru.spring.semestrovka.model.Role;
 import ru.spring.semestrovka.model.State;
 import ru.spring.semestrovka.model.User;

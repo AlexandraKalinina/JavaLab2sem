@@ -8,17 +8,23 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import ru.spring.semestrovka.dto.SignInDto;
 import ru.spring.semestrovka.dto.TokenDto;
+import ru.spring.semestrovka.model.User;
 import ru.spring.semestrovka.service.SignInService;
+import ru.spring.semestrovka.service.UserService;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.util.Optional;
 
 @Controller
 public class SignInController {
     @Autowired
     private SignInService signInService;
+
+    @Autowired
+    private UserService userService;
 
     @RequestMapping(value = "/signIn", method = RequestMethod.GET)
     public ModelAndView signInCreate() {
@@ -33,7 +39,8 @@ public class SignInController {
         TokenDto tokenDto = signInService.signIn(signInDto);
         if (tokenDto != null) {
             if (session.getAttribute("user") == null) {
-                session.setAttribute("user", signInDto);
+                Optional<User> user = userService.getUserBySignInDto(signInDto);
+                session.setAttribute("user", user);
             }
             Cookie cookie = new Cookie("token", tokenDto.getToken());
             resp.addCookie(cookie);

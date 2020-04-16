@@ -9,8 +9,5 @@ import java.io.FileNotFoundException;
 import java.util.List;
 
 public interface ReaderHelper {
-    void loaderFile(String path) throws FileNotFoundException;
-    List<Book> getListBook();
-    List<Author> getListAuthor();
-    List<Genre> getListGenre();
+    Book loaderFile(String path) throws FileNotFoundException;
 }

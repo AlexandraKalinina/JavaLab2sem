@@ -13,6 +13,7 @@ import java.util.List;
 @NoArgsConstructor
 @Builder
 @Entity
+@Table(name = "book")
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,9 +28,15 @@ public class Book {
     @OneToMany(mappedBy = "book")
     private List<Genre> genres;
 
-    public Book(String name, String text) {
+    @OneToMany(mappedBy = "book")
+    private List<Message> messages;
+
+    public Book(Long id, String name, String text, List<Author> authors, List<Genre> genres) {
+        this.id = id;
         this.name = name;
         this.text = text;
+        this.authors = authors;
+        this.genres = genres;
     }
 
 }

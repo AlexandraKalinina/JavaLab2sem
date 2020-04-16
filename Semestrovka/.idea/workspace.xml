@@ -77,6 +77,7 @@
         <option value="Enum" />
         <option value="FxmlFile" />
         <option value="Interface" />
+        <option value="JavaScript File" />
         <option value="Class" />
       </list>
     </option>
@@ -94,20 +95,142 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="ru.spring.semestrovka.security.jwt.provider" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Александра\IdeaProjects\SpringSemestrovka\src\main\webapp" />
+      <recent name="C:\Users\Александра\IdeaProjects\SpringSemestrovka\src\main\webapp\WEB-INF" />
+      <recent name="C:\Users\Александра\IdeaProjects\SpringSemestrovka\src\main\webapp\WEB-INF\templates\js" />
       <recent name="C:\Users\Александра\IdeaProjects\SpringSemestrovka\src\main\resources\META-INF" />
       <recent name="C:\Users\Александра\IdeaProjects\SpringSemestrovka\src\main\resources" />
-      <recent name="C:\Users\Александра\IdeaProjects\SpringSemestrovka\src\main\resources\properties" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ru.spring.semestrovka.security.jwt.provider" />
     </key>
   </component>
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
       <list>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="BD398390DD57D95603AD0419F21DEDD1" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/messages" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="pageId" />
+                <option name="value" value="FIRST_PAGE" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="D630BF10EA2A628AD7F50C1417353D41" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/messages" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;pageId&quot; : &quot;FIRST_PAGE&quot;,&#10;  &quot;text&quot; : &quot;Bye!&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="35A1062AC96B4350C4D03A23EE6ED910" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/profileRest" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzIiwibmFtZSI6ImFsZWtza2FsaW4xbmFAeWFuZGV4LnJ1Iiwicm9sZSI6IlVTRVIifQ.rI5Cqm3WsS_wT819rbvV2Z4pWcr8L5csYDsAVdKUSiQ" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="35A1062AC96B4350C4D03A23EE6ED910" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/signInRest" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;&quot;email&quot; : &quot;alekskalin1na@yandex.ru&quot;,&#10;&quot;password&quot; : &quot;123&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
         <RestClientRequest>
           <option name="biscuits">
             <list>
@@ -772,7 +895,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="HTTP Request.requests#2">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.45">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.spring.semestrovka.repositories.jpa.Main" />
       <module name="SpringSemestrovka" />
@@ -790,6 +913,12 @@
       <method v="2" />
     </configuration>
     <configuration name="requests#2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/main/resources/http/requests.http" index="2">
+      <method v="2" />
+    </configuration>
+    <configuration name="requests#3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/main/resources/http/requests.http" index="3">
+      <method v="2" />
+    </configuration>
+    <configuration name="requests#4" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/main/resources/http/requests.http" index="4">
       <method v="2" />
     </configuration>
     <configuration name="Tomcat 8.5.45" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.45" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
@@ -871,9 +1000,13 @@
       <item itemvalue="HTTP Request.requests#1" />
       <item itemvalue="HTTP Request.requests#2" />
       <item itemvalue="Tomcat Server.Tomcat 8.5.45" />
+      <item itemvalue="HTTP Request.requests#3" />
+      <item itemvalue="HTTP Request.requests#4" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.requests#4" />
+        <item itemvalue="HTTP Request.requests#3" />
         <item itemvalue="HTTP Request.requests#2" />
         <item itemvalue="HTTP Request.requests#1" />
         <item itemvalue="Application.Main" />
@@ -887,17 +1020,12 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@ade1bc06" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@bbbace8c" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@ade1bc06" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@4b005336" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@ade1bc06" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@539bb563" type="9fbbdea:ServiceModel$ServiceNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@bbbace8c" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@1e62f661" type="9fbbdea:ServiceModel$ServiceNode" />
             </path>
           </expand>
           <select />
@@ -924,7 +1052,8 @@
       <workItem from="1586768851266" duration="1095000" />
       <workItem from="1586770041463" duration="8652000" />
       <workItem from="1586779973463" duration="3921000" />
-      <workItem from="1586793280734" duration="8134000" />
+      <workItem from="1586793280734" duration="9196000" />
+      <workItem from="1586879464712" duration="31675000" />
     </task>
     <servers />
   </component>
@@ -934,116 +1063,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/service/SignUpServiceImpl.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="54" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/service/SignUpServiceImpl.java</url>
-          <line>36</line>
-          <option name="timeStamp" value="56" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/service/SignUpServiceImpl.java</url>
-          <line>37</line>
-          <option name="timeStamp" value="57" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/helpers/ReaderHelperImpl.java</url>
-          <line>52</line>
-          <option name="timeStamp" value="68" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/helpers/ReaderHelperImpl.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="69" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/helpers/ReaderHelperImpl.java</url>
-          <line>54</line>
-          <option name="timeStamp" value="70" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/helpers/ReaderHelperImpl.java</url>
-          <line>55</line>
-          <option name="timeStamp" value="71" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/service/AuthorServiceImpl.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="83" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/service/AuthorServiceImpl.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="84" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/service/AuthorServiceImpl.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="85" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/service/AuthorServiceImpl.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="86" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/service/AuthorServiceImpl.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="87" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/service/AuthorServiceImpl.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="88" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/service/AuthorServiceImpl.java</url>
-          <line>40</line>
-          <option name="timeStamp" value="128" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/service/AuthorServiceImpl.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="129" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/service/AuthorServiceImpl.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="130" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/service/AuthorServiceImpl.java</url>
-          <line>42</line>
-          <option name="timeStamp" value="131" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/service/AuthorServiceImpl.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="132" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/service/AuthorServiceImpl.java</url>
-          <line>45</line>
-          <option name="timeStamp" value="133" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/helpers/ReaderHelperImpl.java</url>
-          <line>47</line>
-          <option name="timeStamp" value="134" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/helpers/ReaderHelperImpl.java</url>
-          <line>50</line>
-          <option name="timeStamp" value="135" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/helpers/ReaderHelperImpl.java</url>
-          <line>51</line>
-          <option name="timeStamp" value="136" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/service/ConfirmServiceImpl.java</url>
           <line>18</line>
@@ -1065,31 +1084,6 @@
           <option name="timeStamp" value="149" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/controllers/ConfirmController.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="150" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/controllers/ConfirmController.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="151" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/repositories/UserRepositoriesImpl.java</url>
-          <line>54</line>
-          <option name="timeStamp" value="153" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/repositories/UserRepositoriesImpl.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="154" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/repositories/UserRepositoriesImpl.java</url>
-          <line>56</line>
-          <option name="timeStamp" value="155" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/controllers/rest/SignInControllerRest.java</url>
           <line>17</line>
           <option name="timeStamp" value="156" />
@@ -1098,21 +1092,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/controllers/rest/SignInControllerRest.java</url>
           <line>19</line>
           <option name="timeStamp" value="157" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/service/SignInServiceImpl.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="159" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/service/SignInServiceImpl.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="160" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/service/SignInServiceImpl.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="161" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/controllers/rest/ProfileControllerRest.java</url>
@@ -1134,115 +1113,6 @@
           <line>21</line>
           <option name="timeStamp" value="165" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/security/jwt/provider/JwtAuthenticationProvider.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="166" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/security/jwt/provider/JwtAuthenticationProvider.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="170" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/security/jwt/provider/JwtAuthenticationProvider.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="171" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/security/jwt/provider/JwtAuthenticationProvider.java</url>
-          <line>36</line>
-          <option name="timeStamp" value="172" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/security/jwt/provider/JwtAuthenticationProvider.java</url>
-          <line>37</line>
-          <option name="timeStamp" value="173" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/security/jwt/provider/JwtAuthenticationProvider.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="174" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/security/jwt/provider/JwtAuthenticationProvider.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="175" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/security/jwt/provider/JwtAuthenticationProvider.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="176" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/security/jwt/provider/JwtAuthenticationProvider.java</url>
-          <line>46</line>
-          <option name="timeStamp" value="177" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/security/jwt/filter/JwtAuthenticationFilter.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="180" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/security/jwt/filter/JwtAuthenticationFilter.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="189" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/security/jwt/filter/JwtAuthenticationFilter.java</url>
-          <line>36</line>
-          <option name="timeStamp" value="190" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/security/jwt/filter/JwtAuthenticationFilter.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="191" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/security/config/WebSecurityConfig.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="192" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/security/config/WebSecurityConfig.java</url>
-          <line>47</line>
-          <option name="timeStamp" value="193" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/security/jwt/provider/JwtAuthenticationProvider.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="196" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/security/jwt/provider/JwtAuthenticationProvider.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="197" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/service/SignUpServiceImpl.java</url>
-          <line>26</line>
-          <properties class="ru.spring.semestrovka.service.SignUpServiceImpl" method="signUp">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="55" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/helpers/ReaderHelperImpl.java</url>
-          <line>32</line>
-          <properties class="ru.spring.semestrovka.helpers.ReaderHelperImpl" method="loaderFile">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="63" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/service/AuthorServiceImpl.java</url>
-          <line>38</line>
-          <properties class="ru.spring.semestrovka.service.AuthorServiceImpl" method="getAuthor">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="127" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/service/ConfirmServiceImpl.java</url>
           <line>16</line>
@@ -1250,54 +1120,6 @@
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="145" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/repositories/UserRepositoriesImpl.java</url>
-          <line>51</line>
-          <properties class="ru.spring.semestrovka.repositories.UserRepositoriesImpl" method="getUserByLogin">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="152" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/service/SignInServiceImpl.java</url>
-          <line>28</line>
-          <properties class="ru.spring.semestrovka.service.SignInServiceImpl" method="signIn">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="158" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/security/jwt/provider/JwtAuthenticationProvider.java</url>
-          <line>24</line>
-          <properties class="ru.spring.semestrovka.security.jwt.provider.JwtAuthenticationProvider" method="authenticate">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="167" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/security/jwt/filter/JwtAuthenticationFilter.java</url>
-          <line>19</line>
-          <properties class="ru.spring.semestrovka.security.jwt.filter.JwtAuthenticationFilter" method="doFilter">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="179" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/security/config/WebSecurityConfig.java</url>
-          <line>35</line>
-          <properties class="ru.spring.semestrovka.security.config.WebSecurityConfig" method="configure">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="194" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/security/config/WebSecurityConfig.java</url>
-          <line>46</line>
-          <properties class="ru.spring.semestrovka.security.config.WebSecurityConfig" method="configure">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="195" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
