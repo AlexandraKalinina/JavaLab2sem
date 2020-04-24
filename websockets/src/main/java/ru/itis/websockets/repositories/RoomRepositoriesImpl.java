@@ -3,7 +3,6 @@ package ru.itis.websockets.repositories;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
-import ru.itis.websockets.model.Message;
 import ru.itis.websockets.model.Room;
 
 import javax.persistence.EntityManager;
@@ -18,7 +17,7 @@ public class RoomRepositoriesImpl implements RoomRepositories {
     private EntityManager entityManager;
 
     //language=HQL
-    private static final String HQL_SELECT_ALL = "FROM Room";
+    private static final String HQL_SELECT_ALL = "FROM ru.itis.websockets.model.Room";
 
     @Override
     @Transactional

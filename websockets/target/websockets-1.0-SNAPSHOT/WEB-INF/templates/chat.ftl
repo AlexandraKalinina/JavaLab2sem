@@ -16,20 +16,18 @@
         var sockJS;
         function connect() {
             sockJS =  new SockJS('http://localhost:8080/chat');
-
-            document.cookie = 'X-Authorization=' + '12345' + ';path=/';
-
             sockJS.onmessage = function receiveMessage(response) {
                 let data = response['data'];
                 let json = JSON.parse(data);
-                $('#messagesList').first().after("<li>" + json['from'] + ' ' + json['text'] + "</li>")
+                $('#messagesList').first().after("<li>" + json['userId'] + ' ' + json['text'] + "</li>")
             }
         }
 
-        function sendMessage(text, userId) {
+        function sendMessage(userId, text, number) {
             let message = {
+                "userId": userId,
                 "text": text,
-                "from": userId
+                "roomId": number
             };
 
             sockJS.send(JSON.stringify(message));
@@ -38,13 +36,21 @@
 </head>
 <body onload="connect()">
 <div>
+    <h3>Ваша комната: ${number}</h3>
     <label for="message">Текст сообщения</label>
     <input name="message" id="message" placeholder="Сообщение">
-    <button onclick="sendMessage($('#message').val(), '${userId}')">Отправить</button>
+    <button onclick="sendMessage('${userId}', $('#message').val(), '${number}')">Отправить</button>
     <h3>Сообщения</h3>
-    <ul id="messagesList">
+    <div>
+        <div id="messagesList">
 
-    </ul>
+        </div>
+    </div>
+    <div>
+        <#list messages as message>
+            <h4>${message.user.id} ${message.text}</h4>
+        </#list>
+    </div>
 </div>
 </body>
 

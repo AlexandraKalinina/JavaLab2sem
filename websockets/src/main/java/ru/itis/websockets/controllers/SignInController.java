@@ -40,7 +40,7 @@ public class SignInController {
         if (tokenDto != null) {
             Cookie cookie = new Cookie("token", tokenDto.getToken());
             resp.addCookie(cookie);
-            return new ModelAndView("redirect:/chat");
+            return new ModelAndView("redirect:/room");
         } else return new ModelAndView("redirect:/signIn");
     }
 }

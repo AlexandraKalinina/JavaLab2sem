@@ -8,6 +8,7 @@ import ru.itis.websockets.model.Room;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -18,10 +19,10 @@ public class MessageRepositoriesImpl implements MessageRepositories {
     private EntityManager entityManager;
 
     //language=HQL
-    private static final String HQL_SELECT_ALL = "from Message";
+    private static final String HQL_SELECT_ALL = "from ru.itis.websockets.model.Message";
 
     //language=HQL
-    private static final String HQL_SELECT_BY_ID_BOOK = "from Message r where r.room = room";
+    private static final String HQL_SELECT_BY_ID_ROOM = "from ru.itis.websockets.model.Message m where m.room = :room";
 
     @Override
     @Transactional
@@ -55,9 +56,14 @@ public class MessageRepositoriesImpl implements MessageRepositories {
 
     @Override
     public List<Message> getListByIdRoom(Room room) {
-        List messages = entityManager.createQuery(HQL_SELECT_BY_ID_BOOK)
-                .setParameter("room", room)
-                .getResultList();
-        return messages;
+        try {
+            List messages = entityManager.createQuery(HQL_SELECT_BY_ID_ROOM)
+                    .setParameter("room", room)
+                    .getResultList();
+            return messages;
+        } catch (EmptyResultDataAccessException e) {
+            return new ArrayList<>();
+        }
+
     }
 }

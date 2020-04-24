@@ -3,7 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.16">
     <root id="1">
       <ServerVersion>11.5</ServerVersion>
-      <StartupTime>1587570657</StartupTime>
+      <StartupTime>1587684017</StartupTime>
     </root>
     <database id="2" parent="1" name="AnimeSem1">
       <ObjectId>33422</ObjectId>
@@ -40,9 +40,10 @@
     <database id="10" parent="1" name="WebSockets">
       <ObjectId>42508</ObjectId>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>523999</IntrospectionStateNumber>
+      <IntrospectionStateNumber>524055</IntrospectionStateNumber>
       <Current>1</Current>
-      <Relations>sequence|table|42536|42538|1
+      <Relations>sequence|table|42601|42603|1
+sequence|table|42614|42616|1
 </Relations>
     </database>
     <database id="11" parent="1" name="postgres">
@@ -111,7 +112,7 @@
       <Comment>standard public schema</Comment>
       <StateNumber>360</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>524000</IntrospectionStateNumber>
+      <IntrospectionStateNumber>524056</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <access-method id="27" parent="10" name="btree">
@@ -170,61 +171,160 @@
       <SchemaName>pg_catalog</SchemaName>
       <SchemaId>11</SchemaId>
     </extension>
-    <sequence id="34" parent="26" name="users_id_seq">
-      <ObjectId>42536</ObjectId>
-      <StateNumber>523972</StateNumber>
+    <sequence id="34" parent="26" name="message_id_seq">
+      <ObjectId>42601</ObjectId>
+      <StateNumber>524040</StateNumber>
       <Owner>postgres</Owner>
       <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
-      <DataType>integer</DataType>
+      <DataType>bigint</DataType>
     </sequence>
-    <table id="35" parent="26" name="users">
-      <ObjectId>42538</ObjectId>
+    <sequence id="35" parent="26" name="users_id_seq">
+      <ObjectId>42614</ObjectId>
+      <StateNumber>524042</StateNumber>
       <Owner>postgres</Owner>
-      <StateNumber>523975</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <table id="36" parent="26" name="message">
+      <ObjectId>42603</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>524043</StateNumber>
     </table>
-    <column id="36" parent="35" name="id">
+    <table id="37" parent="26" name="room">
+      <ObjectId>42609</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>524043</StateNumber>
+    </table>
+    <table id="38" parent="26" name="users">
+      <ObjectId>42616</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>524044</StateNumber>
+    </table>
+    <column id="39" parent="36" name="id">
       <Position>1</Position>
-      <DataType>integer|0s</DataType>
+      <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>523972</StateNumber>
-      <DefaultExpression>nextval(&apos;users_id_seq&apos;::regclass)</DefaultExpression>
-      <TypeId>23</TypeId>
+      <StateNumber>524040</StateNumber>
+      <DefaultExpression>nextval(&apos;message_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
     </column>
-    <column id="37" parent="35" name="name">
+    <column id="40" parent="36" name="text">
       <Position>2</Position>
-      <DataType>varchar|0s</DataType>
-      <StateNumber>523972</StateNumber>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>524040</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="38" parent="35" name="email">
+    <column id="41" parent="36" name="id_room">
       <Position>3</Position>
-      <DataType>varchar|0s</DataType>
-      <StateNumber>523972</StateNumber>
-      <TypeId>1043</TypeId>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>524040</StateNumber>
+      <TypeId>20</TypeId>
     </column>
-    <column id="39" parent="35" name="password">
+    <column id="42" parent="36" name="id_user">
       <Position>4</Position>
-      <DataType>varchar|0s</DataType>
-      <StateNumber>523972</StateNumber>
-      <TypeId>1043</TypeId>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>524040</StateNumber>
+      <TypeId>20</TypeId>
     </column>
-    <column id="40" parent="35" name="role">
-      <Position>5</Position>
-      <DataType>varchar|0s</DataType>
-      <StateNumber>523972</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <index id="41" parent="35" name="users_pkey">
-      <ObjectId>42545</ObjectId>
-      <StateNumber>523972</StateNumber>
+    <index id="43" parent="36" name="message_pkey">
+      <ObjectId>42607</ObjectId>
+      <StateNumber>524040</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="42" parent="35" name="users_pkey">
-      <ObjectId>42546</ObjectId>
-      <StateNumber>523972</StateNumber>
+    <key id="44" parent="36" name="message_pkey">
+      <ObjectId>42608</ObjectId>
+      <StateNumber>524040</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>message_pkey</UnderlyingIndexName>
+    </key>
+    <foreign-key id="45" parent="36" name="fkmrk3sqnustp3mujrbk58swvip">
+      <ObjectId>42625</ObjectId>
+      <StateNumber>524043</StateNumber>
+      <ColNames>id_room</ColNames>
+      <RefTableId>42609</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>room</RefTableName>
+      <RefKeyName>room_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="46" parent="36" name="fk38wrfd8ic8q6d7fu6uxo0csrk">
+      <ObjectId>42630</ObjectId>
+      <StateNumber>524044</StateNumber>
+      <ColNames>id_user</ColNames>
+      <RefTableId>42616</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>users</RefTableName>
+      <RefKeyName>users_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="47" parent="37" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>524041</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <index id="48" parent="37" name="room_pkey">
+      <ObjectId>42612</ObjectId>
+      <StateNumber>524041</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="49" parent="37" name="room_pkey">
+      <ObjectId>42613</ObjectId>
+      <StateNumber>524041</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>room_pkey</UnderlyingIndexName>
+    </key>
+    <column id="50" parent="38" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>524042</StateNumber>
+      <DefaultExpression>nextval(&apos;users_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="51" parent="38" name="email">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>524042</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="52" parent="38" name="name">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>524042</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="53" parent="38" name="password">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>524042</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="54" parent="38" name="role">
+      <Position>5</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>524042</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="55" parent="38" name="users_pkey">
+      <ObjectId>42623</ObjectId>
+      <StateNumber>524042</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="56" parent="38" name="users_pkey">
+      <ObjectId>42624</ObjectId>
+      <StateNumber>524042</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>users_pkey</UnderlyingIndexName>

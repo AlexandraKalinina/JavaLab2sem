@@ -3,6 +3,7 @@ C:\Users\Александра\IdeaProjects\websockets\src\main\java\ru\itis\webs
 C:\Users\Александра\IdeaProjects\websockets\src\main\java\ru\itis\websockets\services\CookieService.java
 C:\Users\Александра\IdeaProjects\websockets\src\main\java\ru\itis\websockets\services\TokenService.java
 C:\Users\Александра\IdeaProjects\websockets\src\main\java\ru\itis\websockets\dto\MessageDto.java
+C:\Users\Александра\IdeaProjects\websockets\src\main\java\ru\itis\websockets\services\RoomService.java
 C:\Users\Александра\IdeaProjects\websockets\src\main\java\ru\itis\websockets\repositories\RoomRepositories.java
 C:\Users\Александра\IdeaProjects\websockets\src\main\java\ru\itis\websockets\controllers\SignUpController.java
 C:\Users\Александра\IdeaProjects\websockets\src\main\java\ru\itis\websockets\repositories\UserRepositories.java
@@ -22,7 +23,9 @@ C:\Users\Александра\IdeaProjects\websockets\src\main\java\ru\itis\webs
 C:\Users\Александра\IdeaProjects\websockets\src\main\java\ru\itis\websockets\repositories\CrudRepositories.java
 C:\Users\Александра\IdeaProjects\websockets\src\main\java\ru\itis\websockets\repositories\MessageRepositories.java
 C:\Users\Александра\IdeaProjects\websockets\src\main\java\ru\itis\websockets\services\UserServiceImpl.java
+C:\Users\Александра\IdeaProjects\websockets\src\main\java\ru\itis\websockets\services\RoomServiceImpl.java
 C:\Users\Александра\IdeaProjects\websockets\src\main\java\ru\itis\websockets\handlers\AuthHandshakeHandler.java
+C:\Users\Александра\IdeaProjects\websockets\src\main\java\ru\itis\websockets\dto\JoinDto.java
 C:\Users\Александра\IdeaProjects\websockets\src\main\java\ru\itis\websockets\dto\UserDto.java
 C:\Users\Александра\IdeaProjects\websockets\src\main\java\ru\itis\websockets\services\SignUpServiceImpl.java
 C:\Users\Александра\IdeaProjects\websockets\src\main\java\ru\itis\websockets\dto\SignUpDto.java
@@ -31,7 +34,7 @@ C:\Users\Александра\IdeaProjects\websockets\src\main\java\ru\itis\webs
 C:\Users\Александра\IdeaProjects\websockets\src\main\java\ru\itis\websockets\repositories\MessageRepositoriesImpl.java
 C:\Users\Александра\IdeaProjects\websockets\src\main\java\ru\itis\websockets\model\Message.java
 C:\Users\Александра\IdeaProjects\websockets\src\main\java\ru\itis\websockets\services\SignUpService.java
-C:\Users\Александра\IdeaProjects\websockets\src\main\java\ru\itis\websockets\config\Main.java
+C:\Users\Александра\IdeaProjects\websockets\src\main\java\ru\itis\websockets\controllers\RoomController.java
 C:\Users\Александра\IdeaProjects\websockets\src\main\java\ru\itis\websockets\services\UserService.java
 C:\Users\Александра\IdeaProjects\websockets\src\main\java\ru\itis\websockets\services\MessageServiceImpl.java
 C:\Users\Александра\IdeaProjects\websockets\src\main\java\ru\itis\websockets\model\User.java

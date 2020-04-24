@@ -5,6 +5,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import ru.itis.websockets.dto.SignInDto;
 import ru.itis.websockets.dto.SignUpDto;
+import ru.itis.websockets.dto.UserDto;
 import ru.itis.websockets.model.User;
 import ru.itis.websockets.repositories.UserRepositories;
 
@@ -33,4 +34,5 @@ public class UserServiceImpl implements UserService {
         String email = signInDto.getEmail();
         return userRepositories.getUserByLogin(email);
     }
+
 }
