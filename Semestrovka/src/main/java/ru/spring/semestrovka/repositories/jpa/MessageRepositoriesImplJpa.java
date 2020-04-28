@@ -44,8 +44,8 @@ public class MessageRepositoriesImplJpa implements MessageRepositories {
     @Override
     @Transactional
     public void delete(Long id) {
-        Book book = entityManager.find(Book.class, id);
-        entityManager.remove(book);
+        Message message = entityManager.find(Message.class, id);
+        entityManager.remove(message);
     }
 
     @Override

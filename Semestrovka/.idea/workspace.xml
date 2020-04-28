@@ -999,9 +999,9 @@
       <item itemvalue="Application.Main" />
       <item itemvalue="HTTP Request.requests#1" />
       <item itemvalue="HTTP Request.requests#2" />
-      <item itemvalue="Tomcat Server.Tomcat 8.5.45" />
       <item itemvalue="HTTP Request.requests#3" />
       <item itemvalue="HTTP Request.requests#4" />
+      <item itemvalue="Tomcat Server.Tomcat 8.5.45" />
     </list>
     <recent_temporary>
       <list>
@@ -1053,7 +1053,19 @@
       <workItem from="1586770041463" duration="8652000" />
       <workItem from="1586779973463" duration="3921000" />
       <workItem from="1586793280734" duration="9196000" />
-      <workItem from="1586879464712" duration="31675000" />
+      <workItem from="1586879464712" duration="33868000" />
+      <workItem from="1587155996344" duration="102000" />
+      <workItem from="1587558632635" duration="4304000" />
+      <workItem from="1587570870748" duration="7174000" />
+      <workItem from="1587593385646" duration="1441000" />
+      <workItem from="1587633011647" duration="23638000" />
+      <workItem from="1587684128513" duration="1843000" />
+      <workItem from="1587687259031" duration="621000" />
+      <workItem from="1587722437104" duration="895000" />
+      <workItem from="1587893933375" duration="3503000" />
+      <workItem from="1587909771573" duration="10766000" />
+      <workItem from="1587988911239" duration="596000" />
+      <workItem from="1587997661335" duration="8355000" />
     </task>
     <servers />
   </component>
@@ -1113,6 +1125,11 @@
           <line>21</line>
           <option name="timeStamp" value="165" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/model/User.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="166" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/service/ConfirmServiceImpl.java</url>
           <line>16</line>
@@ -1120,6 +1137,20 @@
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="145" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/webapp/static/js/chat.js</url>
+          <option name="timeStamp" value="181" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/webapp/static/js/chat.js</url>
+          <line>1</line>
+          <option name="timeStamp" value="182" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/webapp/static/js/chat.js</url>
+          <line>8</line>
+          <option name="timeStamp" value="183" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

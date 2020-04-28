@@ -39,8 +39,8 @@ public class RegistrationController {
         if (signUpService.signUp(signUpDto)) {
             Optional<User> user = userService.getUserBySignUpDto(signUpDto);
             session.setAttribute("user", user);
+            return new ModelAndView("redirect:/profile");
         } else return new ModelAndView("redirect:/registration");
         //сделать страницу с надписью о том, что нужно подтвердить эмайл и ссылку на авторизацию
-        return null;
     }
 }

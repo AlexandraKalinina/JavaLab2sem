@@ -17,6 +17,19 @@ function sendMessage(userId, text, bookId, name) {
         }
     });
 }
+function search(query) {
+    let body = {
+      name: query
+    };
+    if (query.length >= 1) {
+        $.ajax({
+            url: "/search",
+            method: "GET",
+            data: JSON.stringify(body),
+            dataType: "json"
+        })
+    }
+}
 
 // LONG POLLING
 function receiveMessage(userId, name) {

@@ -10,6 +10,7 @@
             src="https://code.jquery.com/jquery-3.4.1.min.js"
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
             crossorigin="anonymous"></script>
+    <script src="/static/js/chat.js"></script>
 </head>
 <body>
 
@@ -29,37 +30,13 @@
             <input type="submit" value="book">
         </form>
     </div>
+    <div class="row">
+        <form method="get" action="/searchBook">
+            <input type="submit" value="Поиск по книгам">
+        </form>
+    </div>
 
 </div>
 
-<p><input id="query" oninput="f()"/></p>
-
-<div id="res"></div>
-
-<script type="application/javascript">
-    function search() {
-        if ($("#query").val().length >= 1) {
-            $.ajax({
-                url: "/search",
-                method: "GET",
-                data: {"query": $("#query").val()},
-                dataType: "json",
-                success: function (msg) {
-                    if (msg.objects.length > 0) {
-                        $("#res").html("");
-                        for (var i = 0; i < msg.objects.length; i++) {
-                            $("#res").append("<li>" + msg.objects[i].name + "</li>");
-                        }
-                    } else {
-                        $("#res").html("No results..");
-                    }
-                }
-            })
-        }
-        else {
-            $("#res").html("");
-        }
-    }
-</script>
 </body>
 </html>

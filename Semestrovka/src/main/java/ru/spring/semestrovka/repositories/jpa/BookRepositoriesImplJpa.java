@@ -30,14 +30,13 @@ public class BookRepositoriesImplJpa implements BookRepositories {
     @Override
     @Transactional
     public Optional<Book> getBookByPath(String path) {
-        Book book = null;
         try {
-            book = (Book) entityManager.createQuery(HQL_SELECT_BY_PATH)
+            Book book = (Book) entityManager.createQuery(HQL_SELECT_BY_PATH)
                     .setParameter("text", path).getSingleResult();
+            return Optional.ofNullable(book);
         } catch (NoResultException e) {
             return Optional.empty();
         }
-        return Optional.ofNullable(book);
     }
 
     @Override

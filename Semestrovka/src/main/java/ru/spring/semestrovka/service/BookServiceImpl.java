@@ -10,6 +10,7 @@ import ru.spring.semestrovka.model.Book;
 import ru.spring.semestrovka.repositories.AuthorRepositories;
 import ru.spring.semestrovka.repositories.BookRepositories;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -45,6 +46,13 @@ public class BookServiceImpl implements BookService {
         }
     }
 
+    @Override
+    public List<Book> getListBookByName(String name) {
+        List<Book> books = bookRepositories.getBooksByName(name);
+        if (books.size()!=0) {
+            return books;
+        } else return new ArrayList<>();
+    }
 
 
 }
