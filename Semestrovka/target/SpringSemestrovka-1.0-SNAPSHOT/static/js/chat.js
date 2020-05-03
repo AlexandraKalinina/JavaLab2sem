@@ -18,16 +18,26 @@ function sendMessage(userId, text, bookId, name) {
     });
 }
 function search(query) {
-    let body = {
-      name: query
-    };
     if (query.length >= 1) {
         $.ajax({
-            url: "/search",
+            url: "/search?query=" + query,
             method: "GET",
-            data: JSON.stringify(body),
-            dataType: "json"
+            dataType: "json",
+            contentType: "application/json",
+            success: function (books) {
+                if (books.length > 0) {
+                    $('#res').html("");
+                    for (let i = 0; i < books.length; i++) {
+                        $('#res').append('<li>' + books[i] + '</li>');
+                    }
+                }  else {
+                    $('#res').html("No results..");
+                }
+
+            }
         })
+    }  else {
+        $("#res").html("");
     }
 }
 

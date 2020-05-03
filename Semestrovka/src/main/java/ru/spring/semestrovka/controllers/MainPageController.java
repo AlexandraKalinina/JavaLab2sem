@@ -42,6 +42,6 @@ public class MainPageController {
     @PreAuthorize("permitAll()")
     @GetMapping("/searchBook")
     public ModelAndView search() {
-        return new ModelAndView("redirect:/search");
+        return new ModelAndView("redirect:/searchBooks");
     }
 }

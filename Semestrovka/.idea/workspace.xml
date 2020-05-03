@@ -84,7 +84,7 @@
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
-    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_WARNINGS" value="true" />
     <option name="FILTER_INFO" value="true" />
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
@@ -1065,7 +1065,8 @@
       <workItem from="1587893933375" duration="3503000" />
       <workItem from="1587909771573" duration="10766000" />
       <workItem from="1587988911239" duration="596000" />
-      <workItem from="1587997661335" duration="8355000" />
+      <workItem from="1587997661335" duration="26031000" />
+      <workItem from="1588515725321" duration="374000" />
     </task>
     <servers />
   </component>
@@ -1130,6 +1131,16 @@
           <line>13</line>
           <option name="timeStamp" value="166" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/controllers/SearchController.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="211" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/controllers/SearchController.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="215" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/service/ConfirmServiceImpl.java</url>
           <line>16</line>
@@ -1138,19 +1149,53 @@
           </properties>
           <option name="timeStamp" value="145" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/main/webapp/static/js/chat.js</url>
-          <option name="timeStamp" value="181" />
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/controllers/SearchController.java</url>
+          <line>26</line>
+          <properties class="ru.spring.semestrovka.controllers.SearchController" method="search">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="210" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/main/webapp/static/js/chat.js</url>
-          <line>1</line>
-          <option name="timeStamp" value="182" />
+          <line>29</line>
+          <option name="timeStamp" value="199" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/main/webapp/static/js/chat.js</url>
-          <line>8</line>
-          <option name="timeStamp" value="183" />
+          <line>30</line>
+          <option name="timeStamp" value="200" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/webapp/static/js/chat.js</url>
+          <line>32</line>
+          <option name="timeStamp" value="201" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/webapp/static/js/chat.js</url>
+          <line>33</line>
+          <option name="timeStamp" value="202" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/webapp/static/js/chat.js</url>
+          <line>27</line>
+          <option name="timeStamp" value="203" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/webapp/static/js/chat.js</url>
+          <line>20</line>
+          <option name="timeStamp" value="206" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/webapp/static/js/chat.js</url>
+          <line>21</line>
+          <option name="timeStamp" value="207" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/webapp/static/js/chat.js</url>
+          <line>26</line>
+          <option name="timeStamp" value="208" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

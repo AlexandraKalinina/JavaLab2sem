@@ -14,15 +14,11 @@
 </head>
 <body>
 <div>
-    <input id="query" placeholder="Поиск"/>
+    <input id="query" placeholder="Поиск">
     <button onclick="search($('#query').val())">Поиск</button>
 </div>
-
-
 <div id="res">
-    <#list theseBooks as b>
-        <h3>${b.name}</h3>
-    </#list>
+
 </div>
 </body>
 </html>

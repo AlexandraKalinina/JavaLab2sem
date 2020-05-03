@@ -13,6 +13,7 @@ import ru.spring.semestrovka.model.Book;
 import ru.spring.semestrovka.service.BookService;
 import ru.spring.semestrovka.service.MessageService;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -21,15 +22,20 @@ public class SearchController {
     @Autowired
     private BookService bookService;
 
-    @RequestMapping(value = "/search", method = RequestMethod.GET)
-    public String search(@RequestParam("query") String name, Model model) {
-        List<Book> books = bookService.getListBookByName(name);
-        if (books.size() == 0) {
-            books.add(new Book("No result.."));
-        }
-        model.addAttribute("theseBooks", books);
-        return "listBooks";
-    }
 
+    @RequestMapping(value = "/search", method = RequestMethod.GET)
+    public ResponseEntity<List<String>> search(@RequestParam("query") String name) {
+        List<Book> books = bookService.getListBookByName(name);
+        List<String> names = new ArrayList<>();
+        for (Book b: books) {
+            names.add(b.getName());
+        }
+        return ResponseEntity.ok(names);
+
+    }
+    @RequestMapping(value = "/searchBooks", method = RequestMethod.GET)
+    public ModelAndView search() {
+        return new ModelAndView("listBooks");
+    }
 
 }
