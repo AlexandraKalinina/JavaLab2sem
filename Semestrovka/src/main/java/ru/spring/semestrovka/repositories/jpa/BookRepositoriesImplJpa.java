@@ -4,6 +4,7 @@ import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 import ru.spring.semestrovka.model.Book;
+import ru.spring.semestrovka.model.User;
 import ru.spring.semestrovka.repositories.BookRepositories;
 
 import javax.persistence.EntityManager;
@@ -27,6 +28,9 @@ public class BookRepositoriesImplJpa implements BookRepositories {
     //language=HQL
     private static final String HQL_SELECT_BY_NAME = "from Book b where b.name =:name";
 
+    //language=HQL
+    private static final String HQL_SELECT_BY_OWNER = "select SUM(b.size / 1024 / 1024) from Book b where b.owner =:owner";
+
     @Override
     @Transactional
     public Optional<Book> getBookByPath(String path) {
@@ -47,6 +51,15 @@ public class BookRepositoriesImplJpa implements BookRepositories {
                 .getResultList();
         return books;
     }
+
+    @Override
+    public Long getSumSizeBookOwner(User user) {
+        Long sum = (Long) entityManager.createQuery(HQL_SELECT_BY_OWNER)
+                .setParameter("owner", user)
+                .getSingleResult();
+        return sum;
+    }
+
 
     @Override
     @Transactional
@@ -77,4 +90,6 @@ public class BookRepositoriesImplJpa implements BookRepositories {
     public List<Book> findAll() {
         return entityManager.createQuery(HQL_SELECT_ALL).getResultList();
     }
+
+
 }

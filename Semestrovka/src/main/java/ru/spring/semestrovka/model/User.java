@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 
 @Data
@@ -33,4 +34,8 @@ public class User {
 
     @OneToMany(mappedBy = "user")
     private List<Message> messages;
+
+    @OneToMany(mappedBy = "owner")
+    private List<Book> books;
+
 }

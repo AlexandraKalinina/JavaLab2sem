@@ -27,23 +27,11 @@ public class BookServiceImpl implements BookService {
     private AuthorRepositories authorRepositories;
 
     @Override
-    public Optional<Book> readFile(String name, String link) {
-        Book current_book = Book.builder()
-                .name(name)
-                .text(link)
-                .build();
+    public Optional<Book> readFile(String link) {
         Optional<Book> book = bookRepositories.getBookByPath(link);
-        if (!book.isPresent()) {
-            bookRepositories.save(current_book);
-            return bookRepositories.getBookByPath(link);
-        } else {
-            List<Author> authors = authorRepositories.getAuthorsByIdBook(book.get());
-            if (authors.size() == 0) {
-                bookRepositories.save(current_book);
-                return bookRepositories.getBookByPath(link);
-            }
+        if (book.isPresent()) {
             return book;
-        }
+        } else throw new IllegalArgumentException("Book isn't found");
     }
 
     @Override

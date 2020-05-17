@@ -64,6 +64,16 @@
         <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Library@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="Library: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="users: table" type="69fad909:PgImplModel$LocalTable" />
+      </path>
     </expand>
     <select />
   </component>
@@ -76,8 +86,8 @@
         <option value="spring-beans.schema" />
         <option value="Enum" />
         <option value="FxmlFile" />
-        <option value="Interface" />
         <option value="JavaScript File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -99,11 +109,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Александра\IdeaProjects\SpringSemestrovka\src\main\webapp" />
-      <recent name="C:\Users\Александра\IdeaProjects\SpringSemestrovka\src\main\webapp\WEB-INF" />
-      <recent name="C:\Users\Александра\IdeaProjects\SpringSemestrovka\src\main\webapp\WEB-INF\templates\js" />
-      <recent name="C:\Users\Александра\IdeaProjects\SpringSemestrovka\src\main\resources\META-INF" />
       <recent name="C:\Users\Александра\IdeaProjects\SpringSemestrovka\src\main\resources" />
+      <recent name="C:\Users\Александра\IdeaProjects\SpringSemestrovka\src\main\" />
+      <recent name="C:\Users\Александра\IdeaProjects\SpringSemestrovka" />
+      <recent name="C:\Users\Александра\IdeaProjects\SpringSemestrovka\src\main\resources\properties" />
+      <recent name="C:\Users\Александра\IdeaProjects\SpringSemestrovka\src\main\webapp\WEB-INF" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="ru.spring.semestrovka.security.jwt.provider" />
@@ -112,6 +122,60 @@
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
       <list>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="55A2CEC7133765B9D0166B8B21D78844" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/users/1/books/information" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="D4797127C2A052876A3A725147BF2743" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/books/init" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="BD398390DD57D95603AD0419F21DEDD1" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/books/init" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
         <RestClientRequest>
           <option name="biscuits">
             <list>
@@ -895,23 +959,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.45">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.spring.semestrovka.repositories.jpa.Main" />
-      <module name="SpringSemestrovka" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.spring.semestrovka.repositories.jpa.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="requests#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/main/resources/http/requests.http">
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="HTTP Request.requests#6">
     <configuration name="requests#2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/main/resources/http/requests.http" index="2">
       <method v="2" />
     </configuration>
@@ -919,6 +967,12 @@
       <method v="2" />
     </configuration>
     <configuration name="requests#4" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/main/resources/http/requests.http" index="4">
+      <method v="2" />
+    </configuration>
+    <configuration name="requests#5" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/main/resources/http/requests.http" index="5">
+      <method v="2" />
+    </configuration>
+    <configuration name="requests#6" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/main/resources/http/requests.http" index="6">
       <method v="2" />
     </configuration>
     <configuration name="Tomcat 8.5.45" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.45" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
@@ -996,20 +1050,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
-      <item itemvalue="HTTP Request.requests#1" />
       <item itemvalue="HTTP Request.requests#2" />
       <item itemvalue="HTTP Request.requests#3" />
       <item itemvalue="HTTP Request.requests#4" />
       <item itemvalue="Tomcat Server.Tomcat 8.5.45" />
+      <item itemvalue="HTTP Request.requests#5" />
+      <item itemvalue="HTTP Request.requests#6" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.requests#6" />
+        <item itemvalue="HTTP Request.requests#5" />
         <item itemvalue="HTTP Request.requests#4" />
         <item itemvalue="HTTP Request.requests#3" />
         <item itemvalue="HTTP Request.requests#2" />
-        <item itemvalue="HTTP Request.requests#1" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -1020,12 +1074,12 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@bbbace8c" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@ed224b46" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@bbbace8c" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@1e62f661" type="9fbbdea:ServiceModel$ServiceNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@ed224b46" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@2adf03fc" type="9fbbdea:ServiceModel$ServiceNode" />
             </path>
           </expand>
           <select />
@@ -1066,7 +1120,12 @@
       <workItem from="1587909771573" duration="10766000" />
       <workItem from="1587988911239" duration="596000" />
       <workItem from="1587997661335" duration="26031000" />
-      <workItem from="1588515725321" duration="374000" />
+      <workItem from="1588515725321" duration="973000" />
+      <workItem from="1588599407267" duration="2589000" />
+      <workItem from="1589119970884" duration="7981000" />
+      <workItem from="1589383582517" duration="1024000" />
+      <workItem from="1589552737864" duration="6788000" />
+      <workItem from="1589663563283" duration="32364000" />
     </task>
     <servers />
   </component>
@@ -1125,11 +1184,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/controllers/rest/ProfileControllerRest.java</url>
           <line>21</line>
           <option name="timeStamp" value="165" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/model/User.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="166" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/controllers/SearchController.java</url>

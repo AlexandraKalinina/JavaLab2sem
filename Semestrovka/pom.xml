@@ -214,5 +214,14 @@
       <artifactId>jstl</artifactId>
       <version>1.2</version>
     </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.springframework.session/spring-session-jdbc -->
+    <dependency>
+      <groupId>org.springframework.session</groupId>
+      <artifactId>spring-session-jdbc</artifactId>
+      <version>1.2.0.RC1</version>
+    </dependency>
+
+
   </dependencies>
 </project>

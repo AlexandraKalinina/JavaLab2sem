@@ -1,3 +1,51 @@
+GET http://localhost:8080/users/1/books/information
+
+<> 2020-05-18T124959.200.json
+
+###
+
+GET http://localhost:8080/books/init
+
+###
+
+GET http://localhost:8080/users/1/books/information
+
+<> 2020-05-18T122730.200.json
+
+###
+
+GET http://localhost/users/1/books/information
+
+###
+
+GET http://localhost:8080/books/init
+
+###
+
+GET http://localhost:8080/books/init
+
+###
+
+GET http://localhost:8080/books/init
+
+###
+
+GET http://localhost/books/init
+
+###
+
+GET http://localhost/books/init
+
+###
+
+GET http://localhost/books/init
+
+###
+
+GET http://localhost/books/init
+
+###
+
 GET http://localhost:8080/messages?pageId=FIRST_PAGE
 Accept: */*
 Cache-Control: no-cache
@@ -314,51 +362,6 @@ Content-Type: application/json
 ###
 
 POST http://localhost:8080/signInRest
-Content-Type: application/json
-{:
-"email" : "alekskalin1na@yandex.ru",
-"password" : "123"
-}:
-
-###
-
-POST http://localhost:8080/signInRest
-Content-Type: application/json
-{:
-"email" : "alekskalin1na@yandex.ru",
-"password" : "123"
-}:
-
-###
-
-POST http://localhost:8080/signInRest
-Content-Type: application/json
-{:
-"email" : "alekskalin1na@yandex.ru",
-"password" : "123"
-}:
-
-###
-
-POST http://localhost:8080/signIn
-Content-Type: application/json
-{:
-"email" : "alekskalin1na@yandex.ru",
-"password" : "123"
-}:
-
-###
-
-POST http://localhost/signIn
-Content-Type: application/json
-{:
-"email" : "alekskalin1na@yandex.ru",
-"password" : "123"
-}:
-
-###
-
-POST http://localhost:8080/signIn
 Content-Type: application/json
 {:
 "email" : "alekskalin1na@yandex.ru",

@@ -41,7 +41,7 @@ public class ReaderHelperImpl implements ReaderHelper {
             }
         }
         data.add(text);
-        Optional<Book> book = bookService.readFile(data.get(0), path);
+        Optional<Book> book = bookService.readFile(path);
         //to do: сделать чтобы возвращался лист авторов, а не один автор и кидать в книгу,
         // а одну книгу в контроллер, без листов с авторами и тд
         List<Author> authors = authorService.readFile(data.get(1),data.get(2),data.get(3), book.get());

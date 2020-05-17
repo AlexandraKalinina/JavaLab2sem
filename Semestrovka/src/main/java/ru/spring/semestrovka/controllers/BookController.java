@@ -27,7 +27,7 @@ public class BookController {
     @RequestMapping(value = "/book", method = RequestMethod.GET)
     public ModelAndView book() throws FileNotFoundException {
         ModelAndView modelAndView = new ModelAndView();
-        book = readerHelper.loaderFile("books/Letters.txt");
+        book = readerHelper.loaderFile("books/Нравственные письма.txt");
         List<Book> books = new ArrayList<>();
         books.add(book);
         List<Author> authors = book.getAuthors();

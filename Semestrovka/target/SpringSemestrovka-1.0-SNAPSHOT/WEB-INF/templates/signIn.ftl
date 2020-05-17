@@ -13,6 +13,9 @@
     <form method="post" modelAttribute = "user" action="/signIn">
         <input name="email" placeholder="Email">
         <input type="password" name="password" placeholder="Password">
+        <label>
+            <input type="checkbox" name="remember-me">Запомни меня
+        </label>
         <input type="submit" value="SignIn">
     </form>
 </div>

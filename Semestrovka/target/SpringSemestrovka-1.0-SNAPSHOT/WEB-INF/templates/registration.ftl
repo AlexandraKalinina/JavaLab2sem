@@ -11,6 +11,7 @@
 <h1>Registration</h1>
 <div>
     <form method="post" modelAttribute = "user" action="/registration">
+        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
         <input name="name" placeholder="Name">
         <input name="email" placeholder="Email">
         <input type="password" name="password" placeholder="Password">

@@ -8,6 +8,7 @@ import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Component;
 
+import ru.spring.semestrovka.dto.InformationDto;
 import ru.spring.semestrovka.model.Role;
 import ru.spring.semestrovka.model.State;
 import ru.spring.semestrovka.model.User;
