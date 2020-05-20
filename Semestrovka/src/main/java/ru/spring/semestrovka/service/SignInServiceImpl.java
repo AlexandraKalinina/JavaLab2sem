@@ -32,15 +32,17 @@ public class SignInServiceImpl implements SignInService {
         Optional<User> user = userRepositories.getUserByLogin(login);
         if (user.isPresent()) {
             User current_user = user.get();
-            if (userService.checkUserByPassword(password, user.get().getPassword())) {
-                String token = Jwts.builder()
-                        .setSubject(current_user.getId().toString()) // id пользователя
-                        .claim("name", current_user.getEmail()) // имя
-                        .claim("role", current_user.getRole().name()) // роль
-                        .signWith(SignatureAlgorithm.HS256, secret) // подписываем его с нашим secret
-                        .compact(); // преобразовали в строку
-            return new TokenDto(token);
-            } else throw new AccessDeniedException("Wrong email/password");
-        } else  throw new AccessDeniedException("User not found");
+            if (userService.getConfirmed(user.get())) {
+                if (userService.checkUserByPassword(password, user.get().getPassword())) {
+                    String token = Jwts.builder()
+                            .setSubject(current_user.getId().toString()) // id пользователя
+                            .claim("name", current_user.getEmail()) // имя
+                            .claim("role", current_user.getRole().name()) // роль
+                            .signWith(SignatureAlgorithm.HS256, secret) // подписываем его с нашим secret
+                            .compact(); // преобразовали в строку
+                    return new TokenDto(token);
+                } else throw new AccessDeniedException("Wrong email/password");
+            } else throw new AccessDeniedException("Registration not confirmed");
+        } else throw new AccessDeniedException("User not found");
     }
 }

@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -19,8 +20,7 @@ public class Genre {
 
     private String name;
 
-    @ManyToOne
-    @JoinColumn(name = "id_book")
-    private Book book;
+    @ManyToMany(fetch = FetchType.EAGER, mappedBy = "genres")
+    private List<Book> books;
    /* private Long id_book;*/
 }

@@ -60,6 +60,12 @@ public class BookRepositoriesImplJpa implements BookRepositories {
         return sum;
     }
 
+    @Override
+    @Transactional
+    public void update(Book book) {
+        entityManager.merge(book);
+    }
+
 
     @Override
     @Transactional

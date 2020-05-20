@@ -11,6 +11,6 @@ public interface UserService {
     boolean checkUserByPassword(String password1, String password2);
     Optional<User> getUserBySignUpDto(SignUpDto signUpDto);
     Optional<User> getUserBySignInDto(SignInDto signInDto);
-
+    boolean getConfirmed(User user);
     InformationDto getInformationByUser(Long userId);
 }

@@ -5,6 +5,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import ru.spring.semestrovka.helpers.ReaderHelper;
 import ru.spring.semestrovka.model.Author;
@@ -24,10 +25,10 @@ public class BookController {
     private Book book;
 
     @PreAuthorize("permitAll()")
-    @RequestMapping(value = "/book", method = RequestMethod.GET)
-    public ModelAndView book() throws FileNotFoundException {
+    @RequestMapping(value = "/sequence", method = RequestMethod.GET)
+    public ModelAndView book(@RequestParam("id") Long id) throws FileNotFoundException {
         ModelAndView modelAndView = new ModelAndView();
-        book = readerHelper.loaderFile("books/Нравственные письма.txt");
+        book = readerHelper.loaderFile(id);
         List<Book> books = new ArrayList<>();
         books.add(book);
         List<Author> authors = book.getAuthors();

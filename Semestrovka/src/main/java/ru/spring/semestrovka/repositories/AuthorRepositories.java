@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Optional;
 
 public interface AuthorRepositories extends CrudRepositories<Author, Long>  {
-    List<Author> getAuthorsByIdBook(Book book);
-
+    Optional<Author> getAuthorBySNP(String name, String surname, String patronymic);
+    List<Author> getAuthorsBySurname(String surname);
+    void update(Author author);
 }

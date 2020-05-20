@@ -4,11 +4,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import ru.spring.semestrovka.model.Author;
 import ru.spring.semestrovka.model.Book;
 import ru.spring.semestrovka.model.Genre;
+import ru.spring.semestrovka.repositories.BookRepositories;
 import ru.spring.semestrovka.repositories.GenreRepositories;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -19,31 +22,39 @@ public class GenreServiceImpl implements GenreService {
     @Qualifier("genreRepositories")
     public GenreRepositories genreRepositories;
 
+    @Autowired
+    private BookRepositories bookRepositories;
+
     @Override
-    public List<Genre> readFile(String name, Book book) {
+    @Transactional
+    public void readFile(String name, Book book) {
         Genre current_genre = Genre.builder()
                 .name(name)
-                .book(book)
                 .build();
-        List<Genre> genres = getGenre(current_genre);
-        if (genres.size() == 0) {
+        Optional<Genre> genre = getGenre(current_genre);
+        if (genre.isPresent()) {
+            if (!checkGenre(genre.get(),book)) {
+                book.setGenres(Collections.singletonList(genre.get()));
+                bookRepositories.update(book);
+            }
+        } else {
+           /* current_genre.setBooks(Collections.singletonList(book));
+            genreRepositories.update(current_genre);*/
             genreRepositories.save(current_genre);
-            return getGenre(current_genre);
+            book.setGenres(Collections.singletonList(current_genre));
+            bookRepositories.update(book);
+            /*genreRepositories.save(current_genre);*/
         }
-        else return genres;
     }
 
     @Override
-    public List<Genre> getGenre(Genre genre) {
-        List<Genre> genres = genreRepositories.getGenreByIdBook(genre.getBook());
-        if (genres.size() != 0) {
-            for (Genre g : genres) {
-                if (g.getName().equals(genre.getName())) {
-                    return genres;
-                }
-            }
-        }
-        return new ArrayList<>();
+    public Optional<Genre> getGenre(Genre genre) {
+        return genreRepositories.getGenreByName(genre.getName());
+    }
+
+    @Override
+    public boolean checkGenre(Genre genre, Book book) {
+        return genre.getBooks().contains(book);
     }
 
 }

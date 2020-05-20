@@ -9,5 +9,5 @@ import java.io.FileNotFoundException;
 import java.util.List;
 
 public interface ReaderHelper {
-    Book loaderFile(String path) throws FileNotFoundException;
+    Book loaderFile(Long id) throws FileNotFoundException;
 }

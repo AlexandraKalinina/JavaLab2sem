@@ -58,7 +58,7 @@ public class FileServiceImpl implements FileService{
                                     .text(filePath.toString())
                                     .size(file.length())
                                     .type(Files.probeContentType(filePath))
-                                    .name(file.getName())
+                                    .name(file.getName().substring(0, file.getName().lastIndexOf(".")))
                                     .build();
                         } catch (IOException e) {
                             throw new IllegalArgumentException(e);

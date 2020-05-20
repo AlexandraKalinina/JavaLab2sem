@@ -8,11 +8,6 @@
     <title>Document</title>
 </head>
 <body>
-<h1>You are registered!</h1>
-<div>
-    <form method="get" action="/confirm/redirect">
-        <input type="submit" value="My profile">
-    </form>
-</div>
+<h3>Спасибо, что подтвердили регистрацию</h3>
 </body>
 </html>

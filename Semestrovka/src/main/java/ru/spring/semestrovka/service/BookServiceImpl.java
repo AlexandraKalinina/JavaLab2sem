@@ -23,12 +23,12 @@ public class BookServiceImpl implements BookService {
     private BookRepositories bookRepositories;
 
     @Autowired
-    @Qualifier("authorRepositories")
-    private AuthorRepositories authorRepositories;
+    private AuthorService authorService;
+
 
     @Override
-    public Optional<Book> readFile(String link) {
-        Optional<Book> book = bookRepositories.getBookByPath(link);
+    public Optional<Book> find(Long id) {
+        Optional<Book> book = bookRepositories.find(id);
         if (book.isPresent()) {
             return book;
         } else throw new IllegalArgumentException("Book isn't found");
@@ -40,6 +40,13 @@ public class BookServiceImpl implements BookService {
         if (books.size()!=0) {
             return books;
         } else return new ArrayList<>();
+    }
+
+    @Override
+    public List<Book> getBooksByAuthor(Long id) {
+        /*Optional<Author> author = authorService.find(id);
+        List<Book> books =*/
+        return null;
     }
 
 

@@ -26,9 +26,12 @@ public class ReaderHelperImpl implements ReaderHelper {
     private GenreService genreService;
 
     @Override
-    public Book loaderFile(String path) throws FileNotFoundException {
+    public Book loaderFile(Long id) throws FileNotFoundException {
+        Optional<Book> book = bookService.find(id);
         ClassLoader classLoader = getClass().getClassLoader();
-        InputStream q = classLoader.getResourceAsStream(path);
+        String[] paths = book.get().getText().split("\\\\");
+        String p = paths[8] + "/" + paths[9];
+        InputStream q = classLoader.getResourceAsStream(p);
         Scanner scan = new Scanner(q, "UTF-8");
         List<String> data = new ArrayList<>();
         String text = "";
@@ -41,12 +44,14 @@ public class ReaderHelperImpl implements ReaderHelper {
             }
         }
         data.add(text);
-        Optional<Book> book = bookService.readFile(path);
         //to do: сделать чтобы возвращался лист авторов, а не один автор и кидать в книгу,
         // а одну книгу в контроллер, без листов с авторами и тд
-        List<Author> authors = authorService.readFile(data.get(1),data.get(2),data.get(3), book.get());
-        List<Genre> genres = genreService.readFile(data.get(4), book.get());
-        Book newBook = new Book(book.get().getId(), book.get().getName(), data.get(5), authors, genres);
+        if (book.get().getAuthors().size()==0) {
+            authorService.readFile(data.get(1),data.get(2),data.get(3), book.get());
+        }
+        genreService.readFile(data.get(4), book.get());
+
+        Book newBook = new Book(book.get().getId(), book.get().getName(), data.get(5), book.get().getAuthors(), book.get().getGenres());
         return newBook;
     }
 

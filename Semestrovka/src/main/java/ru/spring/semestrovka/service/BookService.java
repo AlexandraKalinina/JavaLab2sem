@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Optional;
 
 public interface BookService {
-    Optional<Book> readFile(String link);
+    Optional<Book> find(Long id);
     List<Book> getListBookByName(String name);
+    List<Book> getBooksByAuthor(Long id);
 }

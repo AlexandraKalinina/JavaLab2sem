@@ -32,10 +32,14 @@ public class Book {
     @JoinColumn(name = "owner_id")
     private User owner;
 
-    @OneToMany(mappedBy = "book")
+    @ManyToMany(fetch = FetchType.EAGER, mappedBy = "books")
     private List<Author> authors;
 
-    @OneToMany(mappedBy = "book")
+    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinTable( name="book_genre",
+            joinColumns = @JoinColumn(name="book_id", referencedColumnName="id"),
+            inverseJoinColumns = @JoinColumn(name="genre_id", referencedColumnName="id")
+    )
     private List<Genre> genres;
 
     @OneToMany(mappedBy = "book")

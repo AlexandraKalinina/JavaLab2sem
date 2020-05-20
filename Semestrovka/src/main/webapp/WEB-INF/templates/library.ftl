@@ -25,16 +25,21 @@
         </form>
     </div>
     <div class="row">
-        <h1>Books</h1>
-        <form method="get" action="/library/book">
-            <input type="submit" value="book">
-        </form>
-    </div>
-    <div class="row">
-        <form method="get" action="/searchBook">
+        <form method="get" action="/searchBooks">
             <input type="submit" value="Поиск по книгам">
         </form>
     </div>
+    <div class="row">
+        <form method="get" action="/searchAuthor">
+            <input type="submit" value="Поиск по авторам">
+        </form>
+    </div>
+    <div class="row">
+        <form method="get" action="/searchGenre">
+            <input type="submit" value="Поиск по жанрам">
+        </form>
+    </div>
+
 
 </div>
 

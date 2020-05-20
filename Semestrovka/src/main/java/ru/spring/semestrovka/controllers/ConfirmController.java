@@ -3,10 +3,10 @@ package ru.spring.semestrovka.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
-import ru.spring.semestrovka.dto.SignUpDto;
 import ru.spring.semestrovka.model.User;
 import ru.spring.semestrovka.service.ConfirmService;
 import ru.spring.semestrovka.service.UserService;
@@ -36,7 +36,7 @@ public class ConfirmController {
         }
         return modelAndView;
     }
-    @PreAuthorize("permitAll()")
+    /*@PreAuthorize("permitAll()")
     @RequestMapping(value = "/confirm/redirect", method = RequestMethod.GET)
     public String redirectWithUsingRedirectPrefix(HttpSession session) {
         if (session.getAttribute("user") != null) {
@@ -49,6 +49,9 @@ public class ConfirmController {
             }
         }
         return "redirect:/signIn";
+    }*/
+    @GetMapping("/redirect/confirm")
+    private ModelAndView getConfirm() {
+        return new ModelAndView("notConfirm");
     }
-
 }

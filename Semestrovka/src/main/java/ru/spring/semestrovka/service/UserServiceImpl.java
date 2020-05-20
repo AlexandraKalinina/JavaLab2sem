@@ -9,6 +9,7 @@ import ru.spring.semestrovka.dto.InformationDto;
 import ru.spring.semestrovka.dto.SignInDto;
 import ru.spring.semestrovka.dto.SignUpDto;
 import ru.spring.semestrovka.model.Book;
+import ru.spring.semestrovka.model.State;
 import ru.spring.semestrovka.model.User;
 import ru.spring.semestrovka.repositories.BookRepositories;
 import ru.spring.semestrovka.repositories.UserRepositories;
@@ -41,6 +42,13 @@ public class UserServiceImpl implements UserService {
     public Optional<User> getUserBySignInDto(SignInDto signInDto) {
         String email = signInDto.getEmail();
         return userRepositories.getUserByLogin(email);
+    }
+
+    @Override
+    public boolean getConfirmed(User user) {
+        if (user.getState().equals(State.CONFIRMED)) {
+            return true;
+        } else return false;
     }
 
     @Override

@@ -9,6 +9,7 @@ import ru.spring.semestrovka.model.Book;
 import ru.spring.semestrovka.repositories.AuthorRepositories;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -21,33 +22,56 @@ public class AuthorServiceImpl implements AuthorService {
     private AuthorRepositories authorRepositories;
 
     @Override
-    public List<Author> readFile(String name, String surname, String patronymic, Book book) {
+    @Transactional
+    public void readFile(String name, String surname, String patronymic, Book book) {
         Author current_author = Author.builder()
                 .name(name)
                 .surname(surname)
                 .patronymic(patronymic)
-                .book(book)
                 .build();
-        List<Author> authors = getAuthor(current_author);
-        if (authors.size() == 0) {
-            authorRepositories.save(current_author);
-            return getAuthor(current_author);
-        } else return authors;
+        Optional<Author> author = getAuthor(current_author);
+        if (author.isPresent()) {
+            if (!checkAuthor(author.get(),book)) {
+                author.get().setBooks(Collections.singletonList(book));
+                authorRepositories.update(author.get());
+            }
+        } else {
+            current_author.setBooks(Collections.singletonList(book));
+            authorRepositories.update(current_author);
+        }
     }
 
 
+   @Override
+    public boolean checkAuthor(Author author, Book book) {
+        return author.getBooks().contains(book);
+    }
+
     @Override
-    public List<Author> getAuthor(Author author) {
-        List<Author> authors = authorRepositories.getAuthorsByIdBook(author.getBook());
-        if (authors.size() != 0) {
-            for (Author a: authors) {
-                if (a.getName().equals(author.getName()) &
-                        a.getSurname().equals(author.getSurname())
-                        & a.getPatronymic().equals(author.getPatronymic())) {
-                    return authors;
-                }
-            }
-        }
-        return new ArrayList<>();
+    public Optional<Author> getAuthor(Author author) {
+        return authorRepositories.getAuthorBySNP(author.getName(),
+                author.getSurname(), author.getPatronymic());
+    }
+
+    @Override
+    public List<Author> getAuthorBySurname(String surname) {
+        List<Author> authors = authorRepositories.getAuthorsBySurname(surname);
+        if (authors.size()!=0) {
+            return authors;
+        } else return new ArrayList<>();
+    }
+
+    @Override
+    public Optional<Author> find(Long id) {
+        Optional<Author> author = authorRepositories.find(id);
+        if (author.isPresent()) {
+            return author;
+        } else throw new IllegalArgumentException("Author isn't found");
+    }
+
+    @Override
+    public List<Book> getBooks(Long id_author) {
+        Optional<Author> author = find(id_author);
+        return author.get().getBooks();
     }
 }
