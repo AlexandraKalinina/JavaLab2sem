@@ -33,8 +33,10 @@ public class AuthorServiceImpl implements AuthorService {
                 .build();
         Optional<Author> author = getAuthor(current_author);
         if (!author.isPresent()) {
-            current_author.addBook(book);
+            /*book.getAuthors().add(current_author);*/
+            current_author.getBooks().add(book);
             authorRepositories.save(current_author);
+
         }
     }
 

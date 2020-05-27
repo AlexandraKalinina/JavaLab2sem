@@ -20,8 +20,6 @@ public class AuthorController {
     @RequestMapping(value = "/sequenceAuthor", method = RequestMethod.GET)
     public ModelAndView book(@RequestParam("id") Long id)  {
         ModelAndView modelAndView = new ModelAndView();
-        //в автор сервис кидается айди получаю список книг автора
-        /*List<Book> books = authorService.getBooks(id);*/
         Author author = authorService.find(id).get();
         Hibernate.initialize(author.getBooks());
         modelAndView.addObject("books", author.getBooks());

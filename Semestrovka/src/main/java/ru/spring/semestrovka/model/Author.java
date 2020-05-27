@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -24,7 +25,7 @@ public class Author {
     private String surname;
     private String patronymic;
 
-    @ManyToMany(fetch = FetchType.EAGER, mappedBy = "authors", cascade = CascadeType.PERSIST)
+    @ManyToMany(fetch = FetchType.EAGER, mappedBy = "authors", cascade = CascadeType.ALL)
     private Set<Book> books = new HashSet<>();
 
     public Author(String name, String surname, String patronymic) {
@@ -33,9 +34,10 @@ public class Author {
         this.patronymic = patronymic;
     }
 
+    @Transactional
     public void addBook(Book book) {
         books.add(book);
-        book.getAuthors().add(this);
+        /*book.getAuthors().add(this);*/
     }
 
     @Override

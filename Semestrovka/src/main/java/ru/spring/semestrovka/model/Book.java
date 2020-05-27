@@ -34,14 +34,14 @@ public class Book {
     @JoinColumn(name = "owner_id")
     private User owner;
 
-    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable( name="book_author",
             joinColumns = @JoinColumn(name="book_id", referencedColumnName="id"),
             inverseJoinColumns = @JoinColumn(name="author_id", referencedColumnName="id")
     )
     private Set<Author> authors = new HashSet<>();
 
-    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable( name="book_genre",
             joinColumns = @JoinColumn(name="book_id", referencedColumnName="id"),
             inverseJoinColumns = @JoinColumn(name="genre_id", referencedColumnName="id")

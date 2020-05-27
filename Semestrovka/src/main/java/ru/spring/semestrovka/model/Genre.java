@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -22,11 +23,12 @@ public class Genre {
 
     private String name;
 
-    @ManyToMany(fetch = FetchType.EAGER, mappedBy = "genres", cascade = CascadeType.PERSIST)
+    @ManyToMany(fetch = FetchType.EAGER, mappedBy = "genres", cascade = CascadeType.ALL)
     private Set<Book> books = new HashSet<>();
 
+    @Transactional
     public void addBook(Book book) {
         books.add(book);
-        book.getGenres().add(this);
+        /*book.getGenres().add(this);*/
     }
 }

@@ -44,8 +44,6 @@ public class ReaderHelperImpl implements ReaderHelper {
             }
         }
         data.add(text);
-        //to do: сделать чтобы возвращался лист авторов, а не один автор и кидать в книгу,
-        // а одну книгу в контроллер, без листов с авторами и тд
         genreService.readFile(data.get(4), book.get());
         authorService.readFile(data.get(1),data.get(2),data.get(3), book.get());
         Book newBook = new Book(book.get().getId(), book.get().getName(), data.get(5), book.get().getAuthors(), book.get().getGenres());

@@ -1,5 +1,6 @@
 package ru.spring.semestrovka.service;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
@@ -30,16 +31,9 @@ public class GenreServiceImpl implements GenreService {
                 .books(new HashSet<>())
                 .build();
         Optional<Genre> genre = getGenre(current_genre);
-
         if (!genre.isPresent()) {
-
-            /*current_genre.setBooks(Collections.singleton(book));*/
-            /*genreRepositories.update(current_genre);*/
-            /*book.setGenres(Collections.singleton(current_genre));*/
             current_genre.addBook(book);
             genreRepositories.save(current_genre);
-            /*bookRepositories.update(book);*/
-            /*genreRepositories.save(current_genre);*/
         }
     }
 
