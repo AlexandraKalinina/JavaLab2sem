@@ -2,6 +2,7 @@ package ru.spring.semestrovka.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import ru.spring.semestrovka.model.User;
 import ru.spring.semestrovka.repositories.UserRepositories;
 
@@ -14,6 +15,7 @@ public class ConfirmServiceImpl implements ConfirmService {
     private UserRepositories userRepositories;
 
     @Override
+    @Transactional
     public boolean updateSate(String email) {
         Optional<User> userOptional = userRepositories.getUserByLogin(email);
         if (userOptional.isPresent()) {

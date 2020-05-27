@@ -15,6 +15,7 @@ import ru.spring.semestrovka.model.Genre;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 @Controller
 public class BookController {
@@ -31,8 +32,8 @@ public class BookController {
         book = readerHelper.loaderFile(id);
         List<Book> books = new ArrayList<>();
         books.add(book);
-        List<Author> authors = book.getAuthors();
-        List<Genre> genres = book.getGenres();
+        Set<Author> authors = book.getAuthors();
+        Set<Genre> genres = book.getGenres();
         modelAndView.addObject("books", books);
         modelAndView.addObject("authors", authors);
         modelAndView.addObject("genres", genres);

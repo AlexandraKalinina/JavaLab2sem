@@ -44,8 +44,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         /*http.csrf().disable();*/
         http.authorizeRequests().antMatchers("/registration").permitAll() // все могут просматривать эту страничку
                 .antMatchers("/profile").authenticated() //просмотр этой странички только аутенфицированные пользователи
-                .and()
-                .rememberMe().rememberMeParameter("remember-me").tokenRepository(persistentTokenRepository());
+                ;
         http.formLogin().disable();
 /*
         http.logout().disable();
@@ -53,25 +52,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         //http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 
 
-        http.addFilterBefore(jwtAuthenticationFilter, BasicAuthenticationFilter.class);
-        http.logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-                .logoutSuccessUrl("/signIn")
-                .deleteCookies("SESSION", "remember-me")
-                .invalidateHttpSession(true);
-
     }
     @Autowired
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.authenticationProvider(authenticationProvider);
-    }
-    @Autowired
-    private DataSource dataSource;
-
-    @Bean
-    public PersistentTokenRepository persistentTokenRepository() {
-        JdbcTokenRepositoryImpl jdbcTokenRepository = new JdbcTokenRepositoryImpl();
-        jdbcTokenRepository.setDataSource(dataSource);
-        return jdbcTokenRepository;
     }
 }

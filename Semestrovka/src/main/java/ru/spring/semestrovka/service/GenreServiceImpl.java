@@ -10,10 +10,7 @@ import ru.spring.semestrovka.model.Genre;
 import ru.spring.semestrovka.repositories.BookRepositories;
 import ru.spring.semestrovka.repositories.GenreRepositories;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 @Service
 public class GenreServiceImpl implements GenreService {
@@ -30,19 +27,18 @@ public class GenreServiceImpl implements GenreService {
     public void readFile(String name, Book book) {
         Genre current_genre = Genre.builder()
                 .name(name)
+                .books(new HashSet<>())
                 .build();
         Optional<Genre> genre = getGenre(current_genre);
-        if (genre.isPresent()) {
-            if (!checkGenre(genre.get(),book)) {
-                book.setGenres(Collections.singletonList(genre.get()));
-                bookRepositories.update(book);
-            }
-        } else {
-           /* current_genre.setBooks(Collections.singletonList(book));
-            genreRepositories.update(current_genre);*/
+
+        if (!genre.isPresent()) {
+
+            /*current_genre.setBooks(Collections.singleton(book));*/
+            /*genreRepositories.update(current_genre);*/
+            /*book.setGenres(Collections.singleton(current_genre));*/
+            current_genre.addBook(book);
             genreRepositories.save(current_genre);
-            book.setGenres(Collections.singletonList(current_genre));
-            bookRepositories.update(book);
+            /*bookRepositories.update(book);*/
             /*genreRepositories.save(current_genre);*/
         }
     }

@@ -6,8 +6,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.List;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 @Data
 @AllArgsConstructor
@@ -23,17 +24,18 @@ public class Author {
     private String surname;
     private String patronymic;
 
-    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinTable( name="author_book",
-            joinColumns = @JoinColumn(name="author_id", referencedColumnName="id"),
-            inverseJoinColumns = @JoinColumn(name="book_id", referencedColumnName="id")
-    )
-    private List<Book> books;
+    @ManyToMany(fetch = FetchType.EAGER, mappedBy = "authors", cascade = CascadeType.PERSIST)
+    private Set<Book> books = new HashSet<>();
 
     public Author(String name, String surname, String patronymic) {
         this.name = name;
         this.surname = surname;
         this.patronymic = patronymic;
+    }
+
+    public void addBook(Book book) {
+        books.add(book);
+        book.getAuthors().add(this);
     }
 
     @Override

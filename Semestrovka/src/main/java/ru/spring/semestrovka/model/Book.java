@@ -8,7 +8,9 @@ import lombok.extern.slf4j.Slf4j;
 
 import javax.persistence.*;
 import java.io.File;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Data
 @AllArgsConstructor
@@ -32,15 +34,19 @@ public class Book {
     @JoinColumn(name = "owner_id")
     private User owner;
 
-    @ManyToMany(fetch = FetchType.EAGER, mappedBy = "books")
-    private List<Author> authors;
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
+    @JoinTable( name="book_author",
+            joinColumns = @JoinColumn(name="book_id", referencedColumnName="id"),
+            inverseJoinColumns = @JoinColumn(name="author_id", referencedColumnName="id")
+    )
+    private Set<Author> authors = new HashSet<>();
 
-    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
     @JoinTable( name="book_genre",
             joinColumns = @JoinColumn(name="book_id", referencedColumnName="id"),
             inverseJoinColumns = @JoinColumn(name="genre_id", referencedColumnName="id")
     )
-    private List<Genre> genres;
+    private Set<Genre> genres = new HashSet<>();
 
     @OneToMany(mappedBy = "book")
     private List<Message> messages;
@@ -65,7 +71,7 @@ public class Book {
     }
 
 
-    public Book(Long id, String name, String text, List<Author> authors, List<Genre> genres) {
+    public Book(Long id, String name, String text, Set<Author> authors, Set<Genre> genres) {
         this.id = id;
         this.name = name;
         this.text = text;

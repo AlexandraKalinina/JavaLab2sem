@@ -5,6 +5,7 @@ import ru.spring.semestrovka.model.Book;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 public interface AuthorService {
 
@@ -18,5 +19,5 @@ public interface AuthorService {
 
     Optional<Author> find(Long id);
 
-    List<Book> getBooks(Long id_author);
+    Set<Book> getBooks(Long id_author);
 }

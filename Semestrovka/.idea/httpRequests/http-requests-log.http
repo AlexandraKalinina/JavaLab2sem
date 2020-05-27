@@ -8,6 +8,52 @@ GET http://localhost:8080/books/init
 
 GET http://localhost:8080/books/init
 
+###
+
+GET http://localhost:8080/books/init
+
+###
+
+GET http://localhost:8080/books/init
+
+###
+
+GET http://localhost:8080/books/init
+
+<> 2020-05-22T093407.500.html
+
+###
+
+GET http://localhost:8080/books/init
+
+###
+
+GET http://localhost:8080/books/init
+
+<> 2020-05-22T051408.500.html
+
+###
+
+GET http://localhost:8080/books/init
+
+<> 2020-05-22T051348.500.html
+
+###
+
+GET http://localhost:8080/books/init
+
+###
+
+GET http://localhost:8080/books/init
+
+###
+
+GET http://localhost:8080/books/init
+
+###
+
+GET http://localhost:8080/books/init
+
 <> 2020-05-19T050716.500.html
 
 ###
@@ -248,86 +294,6 @@ GET http://localhost:8080/profileRest
 Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzIiwibmFtZSI6ImFsZWtza2FsaW4xbmFAeWFuZGV4LnJ1Iiwicm9sZSI6IlVTRVIifQ.rI5Cqm3WsS_wT819rbvV2Z4pWcr8L5csYDsAVdKUSiQ
 
 <> 2020-04-13T013224.404.html
-
-###
-
-GET http://localhost:8080/profileRest
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzIiwibmFtZSI6ImFsZWtza2FsaW4xbmFAeWFuZGV4LnJ1Iiwicm9sZSI6IlVTRVIifQ.rI5Cqm3WsS_wT819rbvV2Z4pWcr8L5csYDsAVdKUSiQ
-
-<> 2020-04-13T012716.404.html
-
-###
-
-GET http://localhost:8080/profileRest
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzIiwibmFtZSI6ImFsZWtza2FsaW4xbmFAeWFuZGV4LnJ1Iiwicm9sZSI6IlVTRVIifQ.rI5Cqm3WsS_wT819rbvV2Z4pWcr8L5csYDsAVdKUSiQ
-
-<> 2020-04-13T012301.404.html
-
-###
-
-GET http://localhost:8080/profileRest
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzIiwibmFtZSI6ImFsZWtza2FsaW4xbmFAeWFuZGV4LnJ1Iiwicm9sZSI6IlVTRVIifQ.rI5Cqm3WsS_wT819rbvV2Z4pWcr8L5csYDsAVdKUSiQ
-
-<> 2020-04-13T012231.404.html
-
-###
-
-POST http://localhost:8080/signInRest
-Content-Type: application/json
-
-{
-"email" : "alekskalin1na@yandex.ru",
-"password" : "123"
-}
-
-<> 2020-04-13T012137.200.json
-
-###
-
-GET http://localhost:8080/profileRest
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzIiwibmFtZSI6ImFsZWtza2FsaW4xbmFAeWFuZGV4LnJ1Iiwicm9sZSI6IlVTRVIifQ.rI5Cqm3WsS_wT819rbvV2Z4pWcr8L5csYDsAVdKUSiQ
-
-<> 2020-04-13T012104.404.html
-
-###
-
-GET http://localhost:8080/profileRest
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzIiwibmFtZSI6ImFsZWtza2FsaW4xbmFAeWFuZGV4LnJ1Iiwicm9sZSI6IlVTRVIifQ.rI5Cqm3WsS_wT819rbvV2Z4pWcr8L5csYDsAVdKUSiQ
-
-<> 2020-04-13T011952.404.html
-
-###
-
-GET http://localhost:8080/profileRest
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzIiwibmFtZSI6ImFsZWtza2FsaW4xbmFAeWFuZGV4LnJ1Iiwicm9sZSI6IlVTRVIifQ.rI5Cqm3WsS_wT819rbvV2Z4pWcr8L5csYDsAVdKUSiQ
-
-<> 2020-04-13T011938.404.html
-
-###
-
-GET http://localhost:8080/profileRest
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzIiwibmFtZSI6ImFsZWtza2FsaW4xbmFAeWFuZGV4LnJ1Iiwicm9sZSI6IlVTRVIifQ.rI5Cqm3WsS_wT819rbvV2Z4pWcr8L5csYDsAVdKUSiQ
-
-<> 2020-04-13T011629.404.html
-
-###
-
-GET http://localhost:8080/profileRest
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzIiwibmFtZSI6ImFsZWtza2FsaW4xbmFAeWFuZGV4LnJ1Iiwicm9sZSI6IlVTRVIifQ.rI5Cqm3WsS_wT819rbvV2Z4pWcr8L5csYDsAVdKUSiQ
-
-<> 2020-04-13T011526.404.html
-
-###
-
-POST http://localhost:8080/signInRest
-Content-Type: application/json
-
-{
-"email" : "alekskalin1na@yandex.ru",
-"password" : "123"
-}
-
-<> 2020-04-13T011318.200.json
 
 ###
 

@@ -81,7 +81,6 @@ public class ApplicationContextConfig {
 
         return mailSender;
     }
-
     @Bean
     public FreeMarkerViewResolver freemarkerViewResolver() {
         FreeMarkerViewResolver resolver = new FreeMarkerViewResolver();
@@ -93,17 +92,13 @@ public class ApplicationContextConfig {
     }
 
     @Bean
-    public MessageCreate messageCreate() {
-        return new MessageCreateImpl();
-    }
-
-    @Bean
     public FreeMarkerConfigurer freeMarkerConfigurer() {
         FreeMarkerConfigurer freeMarkerConfigurer = new FreeMarkerConfigurer();
         freeMarkerConfigurer.setTemplateLoaderPath("/WEB-INF/templates/");
         freeMarkerConfigurer.setDefaultEncoding("UTF-8");
         return freeMarkerConfigurer;
     }
+
     @Bean
     public BCryptPasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();

@@ -16,7 +16,7 @@
 <h3>Список книг:</h3>
 <div class="block">
     <#list books as book>
-        <h1>${book.name}</h1>
+        <a href=/sequence?id=${book.id}>${book.name}</a>
     </#list>
 </div>
 </body>

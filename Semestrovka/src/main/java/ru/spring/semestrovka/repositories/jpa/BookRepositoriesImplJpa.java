@@ -10,6 +10,7 @@ import ru.spring.semestrovka.repositories.BookRepositories;
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
 import java.util.List;
 import java.util.Optional;
 
@@ -46,9 +47,12 @@ public class BookRepositoriesImplJpa implements BookRepositories {
     @Override
     @Transactional
     public List<Book> getBooksByName(String name) {
-        List books = entityManager.createQuery(HQL_SELECT_BY_NAME)
+
+
+       List books = entityManager.createQuery(HQL_SELECT_BY_NAME)
                 .setParameter("name", name)
                 .getResultList();
+        String s = "";
         return books;
     }
 
@@ -63,6 +67,7 @@ public class BookRepositoriesImplJpa implements BookRepositories {
     @Override
     @Transactional
     public void update(Book book) {
+
         entityManager.merge(book);
     }
 

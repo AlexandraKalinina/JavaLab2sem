@@ -98,6 +98,9 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ru.spring.semestrovka.security.jwt.provider" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Александра\IdeaProjects\SpringSemestrovka\src\main\resources" />
       <recent name="C:\Users\Александра\IdeaProjects\SpringSemestrovka\src\main\" />
@@ -105,13 +108,118 @@
       <recent name="C:\Users\Александра\IdeaProjects\SpringSemestrovka\src\main\resources\properties" />
       <recent name="C:\Users\Александра\IdeaProjects\SpringSemestrovka\src\main\webapp\WEB-INF" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="ru.spring.semestrovka.security.jwt.provider" />
-    </key>
   </component>
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
       <list>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="4E4AEA156BC74419FED4C4497196EEA0" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/books/init" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="0E40B27909A6570D374C9FB9EBAE5D28" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/books/init" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="C3892560E557F28F3CF19F4207EA631D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/books/init" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="3503FCC5D808B34141EE5F62FD563AF3" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/books/init" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="0E53F0264350791D758E3345FDAD1EFF" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/books/init" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="66CB92929D7A796D9FB66FEC8F7E94A3" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/books/init" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
         <RestClientRequest>
           <option name="biscuits">
             <list>
@@ -1234,7 +1342,15 @@
       <workItem from="1589802512621" duration="47958000" />
       <workItem from="1589976456452" duration="1413000" />
       <workItem from="1589980187258" duration="1867000" />
-      <workItem from="1589982461022" duration="5943000" />
+      <workItem from="1589982461022" duration="6573000" />
+      <workItem from="1590145960813" duration="7249000" />
+      <workItem from="1590161784906" duration="8039000" />
+      <workItem from="1590173575840" duration="10705000" />
+      <workItem from="1590185352450" duration="2891000" />
+      <workItem from="1590189723030" duration="1643000" />
+      <workItem from="1590250989497" duration="13635000" />
+      <workItem from="1590316346828" duration="2834000" />
+      <workItem from="1590523233174" duration="15194000" />
     </task>
     <servers />
   </component>
@@ -1246,22 +1362,22 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/service/ConfirmServiceImpl.java</url>
-          <line>18</line>
+          <line>20</line>
           <option name="timeStamp" value="146" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/service/ConfirmServiceImpl.java</url>
-          <line>19</line>
+          <line>21</line>
           <option name="timeStamp" value="147" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/service/ConfirmServiceImpl.java</url>
-          <line>20</line>
+          <line>22</line>
           <option name="timeStamp" value="148" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/service/ConfirmServiceImpl.java</url>
-          <line>17</line>
+          <line>19</line>
           <option name="timeStamp" value="149" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -1296,79 +1412,105 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/helpers/ReaderHelperImpl.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="244" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/helpers/ReaderHelperImpl.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="249" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/helpers/ReaderHelperImpl.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="250" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/helpers/ReaderHelperImpl.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="339" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/helpers/ReaderHelperImpl.java</url>
           <line>48</line>
-          <option name="timeStamp" value="341" />
+          <option name="timeStamp" value="433" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/helpers/ReaderHelperImpl.java</url>
-          <line>51</line>
-          <option name="timeStamp" value="342" />
+          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/repositories/jpa/BookRepositoriesImplJpa.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="436" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/controllers/AuthorController.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="349" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/controllers/AuthorController.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="350" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/controllers/AuthorController.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="351" />
+          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/service/GenreServiceImpl.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="444" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/controllers/AuthorController.java</url>
           <line>25</line>
-          <option name="timeStamp" value="352" />
+          <option name="timeStamp" value="445" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/service/AuthorServiceImpl.java</url>
-          <line>74</line>
-          <option name="timeStamp" value="354" />
+          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/controllers/AuthorController.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="446" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/service/AuthorServiceImpl.java</url>
-          <line>73</line>
-          <option name="timeStamp" value="355" />
+          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/controllers/AuthorController.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="447" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/controllers/AuthorController.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="448" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/service/GenreServiceImpl.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="450" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/controllers/BookController.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="454" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/model/Genre.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="456" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/model/Genre.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="458" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/service/ConfirmServiceImpl.java</url>
-          <line>16</line>
-          <properties class="ru.spring.semestrovka.service.ConfirmServiceImpl" method="updateSate">
-            <option name="EMULATED" value="true" />
-          </properties>
+          <line>18</line>
+          <properties class="ru.spring.semestrovka.service.ConfirmServiceImpl" method="updateSate" />
           <option name="timeStamp" value="145" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/service/AuthorServiceImpl.java</url>
-          <line>72</line>
-          <properties class="ru.spring.semestrovka.service.AuthorServiceImpl" method="getBooks" />
-          <option name="timeStamp" value="353" />
+          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/repositories/jpa/BookRepositoriesImplJpa.java</url>
+          <line>68</line>
+          <properties class="ru.spring.semestrovka.repositories.jpa.BookRepositoriesImplJpa" method="update" />
+          <option name="timeStamp" value="435" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/controllers/AuthorController.java</url>
+          <line>20</line>
+          <properties class="ru.spring.semestrovka.controllers.AuthorController" method="book">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="449" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/service/GenreServiceImpl.java</url>
+          <line>26</line>
+          <properties class="ru.spring.semestrovka.service.GenreServiceImpl" method="readFile" />
+          <option name="timeStamp" value="452" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/helpers/ReaderHelperImpl.java</url>
+          <line>28</line>
+          <properties class="ru.spring.semestrovka.helpers.ReaderHelperImpl" method="loaderFile">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="453" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/spring/semestrovka/model/Genre.java</url>
+          <line>27</line>
+          <properties class="ru.spring.semestrovka.model.Genre" method="addBook">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="455" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/SpringSemestrovka$Tomcat_8_5_45.ic" NAME="Tomcat 8.5.45 Coverage Results" MODIFIED="1590259655520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

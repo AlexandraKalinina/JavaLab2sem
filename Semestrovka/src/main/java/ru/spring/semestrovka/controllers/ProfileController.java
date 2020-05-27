@@ -9,12 +9,13 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class ProfileController {
 
-    @PreAuthorize("isAuthenticated()")
+   /* @PreAuthorize("isAuthenticated()")*/
    // @RequestMapping(value = "/profile/{id-user}", method = RequestMethod.GET)
     @RequestMapping(value = "/profile", method = RequestMethod.GET)
     public ModelAndView profile() {
         //public ModelAndView loadFile(@PathVariable("id-user") String id) {
         ModelAndView modelAndView = new ModelAndView();
+        /*modelAndView.addObject("user", userDetails.getUser());*/
         modelAndView.setViewName("profile");
         return modelAndView;
     }

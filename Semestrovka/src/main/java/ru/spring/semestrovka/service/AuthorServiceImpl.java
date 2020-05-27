@@ -7,11 +7,9 @@ import org.springframework.transaction.annotation.Transactional;
 import ru.spring.semestrovka.model.Author;
 import ru.spring.semestrovka.model.Book;
 import ru.spring.semestrovka.repositories.AuthorRepositories;
+import ru.spring.semestrovka.repositories.BookRepositories;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 @Service
 public class AuthorServiceImpl implements AuthorService {
@@ -21,6 +19,9 @@ public class AuthorServiceImpl implements AuthorService {
     @Qualifier("authorRepositories")
     private AuthorRepositories authorRepositories;
 
+    @Autowired
+    private BookRepositories bookRepositories;
+
     @Override
     @Transactional
     public void readFile(String name, String surname, String patronymic, Book book) {
@@ -28,19 +29,14 @@ public class AuthorServiceImpl implements AuthorService {
                 .name(name)
                 .surname(surname)
                 .patronymic(patronymic)
+                .books(new HashSet<>())
                 .build();
         Optional<Author> author = getAuthor(current_author);
-        if (author.isPresent()) {
-            if (!checkAuthor(author.get(),book)) {
-                author.get().setBooks(Collections.singletonList(book));
-                authorRepositories.update(author.get());
-            }
-        } else {
-            current_author.setBooks(Collections.singletonList(book));
-            authorRepositories.update(current_author);
+        if (!author.isPresent()) {
+            current_author.addBook(book);
+            authorRepositories.save(current_author);
         }
     }
-
 
    @Override
     public boolean checkAuthor(Author author, Book book) {
@@ -70,7 +66,8 @@ public class AuthorServiceImpl implements AuthorService {
     }
 
     @Override
-    public List<Book> getBooks(Long id_author) {
+    @Transactional
+    public Set<Book> getBooks(Long id_author) {
         Optional<Author> author = find(id_author);
         return author.get().getBooks();
     }
