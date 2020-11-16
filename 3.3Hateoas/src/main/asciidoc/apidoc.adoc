@@ -1,0 +1,25 @@
+= Описание API по курсам
+
+== Методы
+
+|===
+|Метод | Назначение
+|`PUT`
+|Обновить сущность или ее состояние
+|===
+
+=== Книги
+
+Можно скачать книги со статусом *unBlocking*
+
+.request
+
+include::{snippets}\download_book\http-request.adoc[]
+
+.response
+
+include::{snippets}\download_book\http-response.adoc[]
+
+.response-fields
+
+include::{snippets}\download_book\response-fields.adoc[]
