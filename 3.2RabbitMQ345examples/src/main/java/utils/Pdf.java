@@ -1,13 +1,9 @@
 package utils;
 
 import com.itextpdf.text.*;
-import com.itextpdf.text.pdf.PdfWriter;
+import com.itextpdf.text.pdf.*;
 import model.User;
 import org.apache.commons.lang3.RandomStringUtils;
-import org.apache.pdfbox.pdmodel.PDDocument;
-import org.apache.pdfbox.pdmodel.PDPage;
-import org.apache.pdfbox.pdmodel.PDPageContentStream;
-import org.apache.pdfbox.pdmodel.font.PDType1Font;
 
 import java.io.*;
 import java.util.Map;
@@ -40,42 +36,39 @@ public class Pdf {
         if (!folder.exists()) {
             folder.mkdir();
         }
-        createPdf(allFileName, helpFileName, folderName);
+        createPdf(allFileName, helpFileName);
     }
 
-    public void createPdf(String allFileName, String helpFileName, String folderName) throws IOException, DocumentException {
+    public void createPdf(String allFileName, String helpFileName) throws IOException, DocumentException {
         //создание pdf документа
-        File file = new File(allFileName);
-        PDDocument doc = PDDocument.load(file);
-        PDPage page = doc.getPage(1);
-        PDPageContentStream contentStream = new PDPageContentStream(doc, page);
-        contentStream.beginText();
-        contentStream.setFont( PDType1Font. TIMES_ROMAN , 16 );
-        contentStream.setLeading(14.5f);
-        contentStream.newLineAtOffset(25, 725);
-        BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("created/txt/" + helpFileName)));
-        while (br.ready()) {
-            String str = br.readLine();
-            contentStream.showText(str);
-            contentStream.newLine();
-        }
-        br.close();
-        contentStream.close();
-        doc.save( folderName + "/" + RandomStringUtils.random(5, true, true) + ".pdf");
-        doc.close();
-       /* Document document = new Document();
+
+
+        Document document = new Document();
+
         PdfWriter.getInstance(document, new FileOutputStream(allFileName));
+
         document.open();
-        Font font = FontFactory.getFont(FontFactory.COURIER, 16, BaseColor.BLACK);
+        //подключаем файл шрифта, который поддерживает кириллицу
+        BaseFont bf = BaseFont.createFont("font/19925.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+
+        Font font = new Font(bf);
 
         BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("created/txt/" + helpFileName)));
         //запись в pdf текстовый файл
+//        Chunk chunk = new Chunk("", font);
+        Paragraph paragraph = new Paragraph();
+        paragraph.setFont(font);
+        paragraph.setLeading(15);
         while (br.ready()) {
-            String str = br.readLine();
-            Chunk chunk = new Chunk(str, font);
-            document.add(chunk);
+            String str = br.readLine() + "\n";
+            //Adding text in the form of string
+            System.out.println(str);
+            paragraph.add(str);
         }
+        document.add(paragraph);
+
         document.close();
-        br.close();*/
+        System.out.println("закрылся");
+        br.close();
     }
 }

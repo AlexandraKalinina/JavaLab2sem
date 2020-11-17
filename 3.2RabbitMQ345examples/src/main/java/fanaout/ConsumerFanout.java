@@ -21,7 +21,6 @@ public class ConsumerFanout {
     public static void main(String[] args) {
         ConnectionFactory connectionFactory = new ConnectionFactory();
         connectionFactory.setHost("localhost");
-
         try {
             Connection connection = connectionFactory.newConnection();
             Channel channel = connection.createChannel();

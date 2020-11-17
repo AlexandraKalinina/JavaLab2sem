@@ -50,7 +50,6 @@ public class ProducerFanout {
             } catch (IOException | TimeoutException e) {
                 throw new IllegalArgumentException(e);
             }
-            ProducerDirect producerDirect = new ProducerDirect();
             /*if (purpose.equals("Справка")) {
 
             } else {
