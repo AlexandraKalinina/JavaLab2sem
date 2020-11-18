@@ -1,0 +1,7 @@
+User.class
+HtmlForm.class
+dto\HtmlInputDto.class
+HtmlInput.class
+META-INF\services\javax.annotation.processing.Processor
+HtmlProcessor.class
+utils\MessageCreate.class
